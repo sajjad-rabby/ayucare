@@ -139,7 +139,6 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
                   ),
       );
 
-  static String _fmt(DateTime d) => formatTodoWhen(d);
 }
 
 class TodoDetailScreen extends StatefulWidget {
