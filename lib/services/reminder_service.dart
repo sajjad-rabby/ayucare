@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -5,24 +7,88 @@ import 'package:timezone/data/latest_all.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
 /// Daily on-device reminders. No server, no account, no location permission:
-/// times are resolved in the DEVICE timezone (location-aware enough without GPS).
-/// Water nudge 8 PM local, exercise nudge 7 AM local. Inexact scheduling —
-/// no exact-alarm permission needed.
+/// times resolve in the DEVICE timezone. Users can add multiple reminders at
+/// any 12-hour time; each is scheduled daily. Inexact scheduling only.
+class ReminderItem {
+  ReminderItem({
+    required this.id,
+    required this.title,
+    required this.body,
+    required this.hour,
+    required this.minute,
+    required this.enabled,
+    required this.kind,
+  });
+
+  final String id, title, body;
+  final int hour, minute;
+  final bool enabled;
+  final String kind; // water | exercise | custom
+
+  /// Always 12-hour, regardless of device clock setting.
+  String get time12 {
+    final h12 = hour % 12 == 0 ? 12 : hour % 12;
+    final ap = hour < 12 ? 'AM' : 'PM';
+    return '$h12:${minute.toString().padLeft(2, '0')} $ap';
+  }
+
+  IconData get icon => switch (kind) {
+    'water' => Icons.water_drop_outlined,
+    'exercise' => Icons.fitness_center_outlined,
+    _ => Icons.notifications_outlined,
+  };
+
+  Map<String, Object?> toJson() => {
+    'id': id, 'title': title, 'body': body, 'hour': hour,
+    'minute': minute, 'enabled': enabled, 'kind': kind,
+  };
+
+  factory ReminderItem.fromJson(Map<String, Object?> j) => ReminderItem(
+    id: j['id'] as String,
+    title: j['title'] as String,
+    body: j['body'] as String,
+    hour: (j['hour'] as num).toInt(),
+    minute: (j['minute'] as num).toInt(),
+    enabled: j['enabled'] as bool,
+    kind: j['kind'] as String,
+  );
+}
+
 class ReminderService {
   ReminderService._();
   static final plugin = FlutterLocalNotificationsPlugin();
+  static const _kList = 'reminders.v2';
+  static const maxReminders = 8;
 
-  static const waterId = 101;
-  static const exerciseId = 102;
-  static const waterHour = 20, waterMinute = 0;
-  static const exerciseHour = 7, exerciseMinute = 0;
-  static const _kWater = 'remind.water';
-  static const _kExercise = 'remind.exercise';
+  static List<ReminderItem> _defaults() => [
+    ReminderItem(
+        id: 'water-evening', title: 'AyuCare · Water check-in',
+        body: 'Did you drink enough water today? A glass now keeps you steady.',
+        hour: 20, minute: 0, enabled: true, kind: 'water'),
+    ReminderItem(
+        id: 'exercise-morning', title: 'AyuCare · Move a little',
+        body: 'Time for today\u2019s movement — even a short walk counts.',
+        hour: 7, minute: 0, enabled: true, kind: 'exercise'),
+  ];
 
-  static Future<bool> get waterOn async =>
-      (await SharedPreferences.getInstance()).getBool(_kWater) ?? true;
-  static Future<bool> get exerciseOn async =>
-      (await SharedPreferences.getInstance()).getBool(_kExercise) ?? true;
+  static Future<List<ReminderItem>> load() async {
+    final raw =
+        (await SharedPreferences.getInstance()).getStringList(_kList);
+    if (raw == null) {
+      final d = _defaults();
+      await save(d);
+      return d;
+    }
+    return raw
+        .map((s) => ReminderItem.fromJson(
+            (jsonDecode(s) as Map).cast<String, Object?>()))
+        .toList();
+  }
+
+  static Future<void> save(List<ReminderItem> items) async {
+    (await SharedPreferences.getInstance()).setStringList(
+        _kList, items.map((e) => jsonEncode(e.toJson())).toList());
+  }
 
   static Future<void> init() async {
     const android = AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -35,8 +101,7 @@ class ReminderService {
     } catch (_) {
       tz.setLocalLocation(tz.getLocation('Asia/Dhaka'));
     }
-    if (await waterOn) await scheduleWater();
-    if (await exerciseOn) await scheduleExercise();
+    await rescheduleAll(await load());
   }
 
   static Future<bool> requestPermission() async {
@@ -53,13 +118,11 @@ class ReminderService {
     return at;
   }
 
-  static Future<void> _daily({
-    required int id,
-    required String title,
-    required String body,
-    required int hour,
-    required int minute,
-  }) async {
+  /// Cancel everything we own, then schedule enabled items (ids 200+index).
+  static Future<void> rescheduleAll(List<ReminderItem> items) async {
+    for (var i = 0; i < maxReminders; i++) {
+      await plugin.cancel(id: 200 + i);
+    }
     const details = NotificationDetails(
       android: AndroidNotificationDetails(
         'ayucare_daily',
@@ -67,42 +130,27 @@ class ReminderService {
         importance: Importance.defaultImportance,
       ),
     );
-    await plugin.zonedSchedule(
-      id: id,
-      title: title,
-      body: body,
-      scheduledDate: _next(hour, minute),
-      notificationDetails: details,
-      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-      matchDateTimeComponents: DateTimeComponents.time,
-    );
-  }
-
-  static Future<void> scheduleWater() => _daily(
-        id: waterId,
-        title: 'AyuCare · Water check-in',
-        body: 'Did you drink enough water today? A glass now keeps you steady.',
-        hour: waterHour,
-        minute: waterMinute,
+    var slot = 0;
+    for (final r in items) {
+      if (!r.enabled || slot >= maxReminders) continue;
+      await plugin.zonedSchedule(
+        id: 200 + slot,
+        title: r.title,
+        body: r.body,
+        scheduledDate: _next(r.hour, r.minute),
+        notificationDetails: details,
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        matchDateTimeComponents: DateTimeComponents.time,
       );
-
-  static Future<void> scheduleExercise() => _daily(
-        id: exerciseId,
-        title: 'AyuCare · Move a little',
-        body: 'Time for today\u2019s movement — even a short walk counts.',
-        hour: exerciseHour,
-        minute: exerciseMinute,
-      );
-
-  static Future<void> setWater(bool on) async {
-    (await SharedPreferences.getInstance()).setBool(_kWater, on);
-    on ? await scheduleWater() : await plugin.cancel(id: waterId);
+      slot++;
+    }
   }
 
-  static Future<void> setExercise(bool on) async {
-    (await SharedPreferences.getInstance()).setBool(_kExercise, on);
-    on ? await scheduleExercise() : await plugin.cancel(id: exerciseId);
+  static String get zoneName {
+    try {
+      return tz.local.name;
+    } catch (_) {
+      return 'device timezone';
+    }
   }
-
-  static String get zoneName => tz.local.name;
 }

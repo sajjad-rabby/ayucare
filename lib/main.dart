@@ -72,7 +72,8 @@ class _RootShellState extends State<RootShell> {
       const HomeScreen(),
       const AzScreen(),
       const SearchScreen(),
-      const SavedScreen(),
+      // Fresh key per visit: Saved always reloads (instant bookmark feedback).
+      SavedScreen(key: ValueKey('saved-$_i')),
       MoreScreen(mode: widget.mode, onMode: widget.onMode),
     ];
     return Scaffold(

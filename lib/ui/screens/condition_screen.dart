@@ -87,14 +87,19 @@ class _ConditionScreenState extends State<ConditionScreen> {
         children: [
           // Identity + about merged
           if (c.image.isNotEmpty)
-            ClipRRect(
-              borderRadius: BorderRadius.circular(AyuRadius.m),
-              child: Image.asset(c.image,
-                  height: 190,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  semanticLabel: 'Illustration for ${c.name}',
-                  errorBuilder: (ctx, e, s) => const SizedBox.shrink()),
+            RepaintBoundary(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(AyuRadius.m),
+                child: Image.asset(c.image,
+                    height: 190,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                    cacheHeight: 380,
+                    gaplessPlayback: true,
+                    semanticLabel: 'Illustration for ${c.name}',
+                    errorBuilder: (ctx, e, s) =>
+                        const SizedBox.shrink()),
+              ),
             ),
           if (c.imageCredit.isNotEmpty)
             Padding(
