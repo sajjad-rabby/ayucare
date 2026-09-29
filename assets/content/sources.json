@@ -1,0 +1,98 @@
+[
+ [
+  "SRC-WHO-DEN",
+  "fact sheet",
+  "WHO",
+  "Dengue and severe dengue",
+  "https://www.who.int/news-room/fact-sheets/detail/dengue-and-severe-dengue",
+  "",
+  "2026-09-29",
+  "Dengue",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-CDC-DEN",
+  "portal",
+  "CDC",
+  "Dengue",
+  "https://www.cdc.gov/dengue/",
+  "",
+  "2026-09-29",
+  "Dengue",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-NHS-GEN",
+  "portal",
+  "NHS",
+  "Health A to Z",
+  "https://www.nhs.uk/conditions/",
+  "",
+  "2026-09-29",
+  "Multiple",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-MED-GEN",
+  "portal",
+  "MedlinePlus",
+  "MedlinePlus Health Topics",
+  "https://medlineplus.gov/",
+  "",
+  "2026-09-29",
+  "Multiple",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-NCCIH-GEN",
+  "portal",
+  "NCCIH",
+  "Herbs at a Glance",
+  "https://www.nccih.nih.gov/health/herbsataglance",
+  "",
+  "2026-09-29",
+  "Herbs",
+  "Reference",
+  "unverified"
+ ],
+ [
+  "SRC-WHO-FLU",
+  "fact sheet",
+  "WHO",
+  "Influenza (Seasonal)",
+  "https://www.who.int/news-room/fact-sheets/detail/influenza-(seasonal)",
+  "",
+  "2026-09-29",
+  "Influenza",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-WHO-YF",
+  "fact sheet",
+  "WHO",
+  "Yellow fever",
+  "https://www.who.int/news-room/fact-sheets/detail/yellow-fever",
+  "",
+  "2026-09-29",
+  "Yellow Fever",
+  "Reference",
+  "verified"
+ ],
+ [
+  "SRC-WHO-ZIKA",
+  "fact sheet",
+  "WHO",
+  "Zika virus",
+  "https://www.who.int/news-room/fact-sheets/detail/zika-virus",
+  "",
+  "2026-09-29",
+  "Zika",
+  "Reference",
+  "verified"
+ ]
+]

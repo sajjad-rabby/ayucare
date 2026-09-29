@@ -1,0 +1,24 @@
+name: ayucare
+description: AyuCare — educational health & Ayurveda reference (ads off, affiliate off).
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/
+    - assets/content/

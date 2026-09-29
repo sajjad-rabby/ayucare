@@ -1,0 +1,400 @@
+[
+ {
+  "pid": "P-CHYAWAN-01",
+  "name": "Dabur Chyawanprash Awaleha",
+  "brand": "Dabur",
+  "cat": "Ayurvedic health supplement",
+  "desc": "A classic 40+ herb Ayurvedic preparation for general wellness routines.",
+  "merchant": "DaburShop (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.daburshop.com/products/dabur-chyawanprash-awaleha",
+  "herb": "amla",
+  "conds": [
+   "C-INFLUENZA-001"
+  ],
+  "evidence": "Traditional use",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "General wellness; not flu treatment."
+ },
+ {
+  "pid": "P-TULSI-TEA-01",
+  "name": "Organic Tulsi Original Tea (18 ct)",
+  "brand": "Organic India",
+  "cat": "Herbal tea",
+  "desc": "Caffeine-free holy-basil infusion for everyday tea routines.",
+  "merchant": "Organic India (official US)",
+  "country": "USA",
+  "currency": "USD",
+  "url": "https://shop.organicindiausa.com/products/tulsi-original",
+  "herb": "tulsi",
+  "conds": [
+   "C-BRONCHITIS-001",
+   "C-FEVER-001",
+   "C-LARYNGITIS-001",
+   "C-INFLUENZA-001",
+   "C-HEADACHE-001",
+   "C-SINUSITIS-001"
+  ],
+  "evidence": "Traditional use",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Shared staple across respiratory/comfort topics."
+ },
+ {
+  "pid": "P-TULSI-GINGER-01",
+  "name": "Organic India Tulsi Ginger Tea",
+  "brand": "Organic India",
+  "cat": "Herbal tea",
+  "desc": "Tulsi-ginger infusion for soothing tea routines.",
+  "merchant": "Amazon.in",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.amazon.in/TATA-Product-Antioxidants-Metabolism-Caffeine-Free/dp/B00Q4E4HWI",
+  "herb": "tulsi",
+  "conds": [
+   "C-TONSILLITIS-001",
+   "C-GASTRITIS-001",
+   "C-MIGRAINE-001"
+  ],
+  "evidence": "Traditional use",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Availability may vary by region."
+ },
+ {
+  "pid": "P-TRIPHALA-01",
+  "name": "Dabur Triphala Churna 500g",
+  "brand": "Dabur",
+  "cat": "Ayurvedic powder",
+  "desc": "Three-fruit Ayurvedic powder traditionally used for bowel regularity routines.",
+  "merchant": "DaburShop (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.daburshop.com/products/dabur-triphala-churna",
+  "herb": "triphala",
+  "conds": [
+   "C-CONSTIPATION-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Follow label; persistent symptoms need care."
+ },
+ {
+  "pid": "P-NEEM-TAB-01",
+  "name": "Organic Neem Caplets (60 ct)",
+  "brand": "Himalaya",
+  "cat": "Herbal supplement",
+  "desc": "Neem stem/leaf preparation for skin-comfort routines.",
+  "merchant": "Himalaya USA (official)",
+  "country": "USA",
+  "currency": "USD",
+  "url": "https://himalayausa.com/products/organic-neem",
+  "herb": "neem",
+  "conds": [
+   "C-ACNE-001",
+   "C-ECZEMA-001",
+   "C-PSORIASIS-001"
+  ],
+  "evidence": "Limited evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Informational; not acne treatment."
+ },
+ {
+  "pid": "P-NEEM-GEL-01",
+  "name": "Himalaya Purifying Neem Face Gel 100ml",
+  "brand": "Himalaya",
+  "cat": "Skin care",
+  "desc": "Neem-turmeric face gel for everyday cleansing routines.",
+  "merchant": "PharmEasy",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://pharmeasy.in/health-care/products/himalaya-purifying-neem-face-gel-100ml-ind-3651088",
+  "herb": "neem",
+  "conds": [
+   "C-ACNE-001"
+  ],
+  "evidence": "Traditional use",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Patch-test first."
+ },
+ {
+  "pid": "P-LIV52-01",
+  "name": "Himalaya Liv.52 Tablets (100)",
+  "brand": "Himalaya",
+  "cat": "Herbal supplement",
+  "desc": "Liver-comfort herbal preparation for general wellness routines.",
+  "merchant": "Himalaya India (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://himalayawellness.in/collections/all/products/liv-52",
+  "herb": "bhumi-amla",
+  "conds": [
+   "C-JAUNDICE-001"
+  ],
+  "evidence": "Preliminary research",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Jaundice needs diagnosis first; informational only."
+ },
+ {
+  "pid": "P-ODOMOS-01",
+  "name": "Odomos Naturals Mosquito Repellent Cream 50g",
+  "brand": "Odomos (Dabur)",
+  "cat": "Prevention",
+  "desc": "Citronella-aloe repellent cream for bite-prevention routines.",
+  "merchant": "Truemeds",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.truemeds.in/otc/odomos-naturals-cream-50-gm-tm-coom1-005031",
+  "herb": "",
+  "conds": [
+   "C-DENGUE-001",
+   "C-YELLOW-FEVER-001",
+   "C-ZIKA-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Prevention aid, not treatment."
+ },
+ {
+  "pid": "P-PEPPERMINT-01",
+  "name": "Soulflower Peppermint Essential Oil 15ml",
+  "brand": "Soulflower",
+  "cat": "Essential oil",
+  "desc": "Peppermint oil for aromatherapy routines (always dilute).",
+  "merchant": "Soulflower (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.soulflower.in/products/soulflower-peppermint-essential-oil",
+  "herb": "peppermint",
+  "conds": [
+   "C-HEADACHE-001",
+   "C-MIGRAINE-001"
+  ],
+  "evidence": "Limited evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Dilute; keep from young children's faces. Availability may vary."
+ },
+ {
+  "pid": "P-VICKS-01",
+  "name": "Vicks VapoRub Balm 50ml",
+  "brand": "Vicks",
+  "cat": "Non-prescription comfort",
+  "desc": "Menthol-camphor balm for cold-comfort routines.",
+  "merchant": "1mg (Tata)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.1mg.com/otc/vicks-vaporub-balm-with-menthol-camphor-eucalyptus-oil-relieves-6-symptoms-of-cough-cold-goodness-of-ayurveda-otc236863",
+  "herb": "peppermint",
+  "conds": [
+   "C-BRONCHITIS-001",
+   "C-SINUSITIS-001",
+   "C-INFLUENZA-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Not for children under 2."
+ },
+ {
+  "pid": "P-STREPSILS-01",
+  "name": "Strepsils Honey & Lemon Lozenges",
+  "brand": "Strepsils",
+  "cat": "Non-prescription comfort",
+  "desc": "Antiseptic lozenges for sore-throat comfort routines.",
+  "merchant": "Strepsils UK (official)",
+  "country": "UK",
+  "currency": "GBP",
+  "url": "https://www.strepsils.co.uk/all-products/strepsils-honey-lemon-lozenges/",
+  "herb": "honey",
+  "conds": [
+   "C-TONSILLITIS-001",
+   "C-LARYNGITIS-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Over 6/12y per label; availability varies by region."
+ },
+ {
+  "pid": "P-CANDID-01",
+  "name": "Candid Antifungal Cream (Clotrimazole 1%)",
+  "brand": "Candid",
+  "cat": "Non-prescription antifungal",
+  "desc": "Clotrimazole cream for fungal skin-comfort routines as directed.",
+  "merchant": "1mg (Tata)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.1mg.com/otc/candid-multi-benefit-skin-cream-for-fungal-infections-ringworm-itching-irritation-derma-care-otc402771",
+  "herb": "",
+  "conds": [
+   "C-RINGWORM-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Use as directed; persistent cases need a clinician."
+ },
+ {
+  "pid": "P-LOTUS-SUN-01",
+  "name": "Lotus Herbals Safe Sunscreen SPF 30 (50g)",
+  "brand": "Lotus Herbals",
+  "cat": "Sun care",
+  "desc": "Daily sunscreen for sun-protection routines.",
+  "merchant": "Truemeds",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.truemeds.in/otc/lotus-herbals-safe-sunscreen-spf-30-cream-50-gm-tm-coom1-004939",
+  "herb": "",
+  "conds": [
+   "C-VITILIGO-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Sun protection essential for light patches."
+ },
+ {
+  "pid": "P-VASELINE-01",
+  "name": "Vaseline Healthy Bright Complete10 Lotion",
+  "brand": "Vaseline",
+  "cat": "Skin care",
+  "desc": "Moisturizing body lotion for dry-skin routines.",
+  "merchant": "Vaseline (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.vaseline.com/in/en/p/vaseline-healthy-bright-complete10-lotion.html/08901030733901",
+  "herb": "aloe-vera",
+  "conds": [
+   "C-XERODERMA-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Brand page; availability may vary by region."
+ },
+ {
+  "pid": "P-GILOY-01",
+  "name": "Dabur Giloy Juice 1L",
+  "brand": "Dabur",
+  "cat": "Ayurvedic juice",
+  "desc": "Giloy-based juice for traditional wellness routines.",
+  "merchant": "DaburShop (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.daburshop.com/products/dabur-giloy-juice",
+  "herb": "giloy",
+  "conds": [
+   "C-FEVER-001",
+   "C-DENGUE-001"
+  ],
+  "evidence": "Preliminary research",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Direct fetch returned 200 on 2026-09-29. Availability may vary by region."
+ },
+ {
+  "pid": "P-HONEY-01",
+  "name": "Dabur Honey",
+  "brand": "Dabur",
+  "cat": "Food",
+  "desc": "Pure honey for throat-soothing food routines (12m+ only).",
+  "merchant": "DaburShop (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.daburshop.com/products/dabur-honey",
+  "herb": "honey",
+  "conds": [
+   "C-BRONCHITIS-001",
+   "C-LARYNGITIS-001",
+   "C-TONSILLITIS-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Direct fetch returned 200 on 2026-09-29. Availability may vary by region."
+ },
+ {
+  "pid": "P-AMLA-01",
+  "name": "Dabur Amla Juice",
+  "brand": "Dabur",
+  "cat": "Ayurvedic juice",
+  "desc": "Amla-based juice for traditional digestive routines.",
+  "merchant": "DaburShop (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://www.daburshop.com/products/dabur-amla-juice",
+  "herb": "amla",
+  "conds": [
+   "C-GASTRITIS-001"
+  ],
+  "evidence": "Traditional use",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Direct fetch returned 200 on 2026-09-29. Availability may vary by region."
+ },
+ {
+  "pid": "P-ASHWA-01",
+  "name": "Ashwagandha Capsules",
+  "brand": "Organic India",
+  "cat": "Herbal supplement",
+  "desc": "Ashwagandha root preparation for stress/sleep routines.",
+  "merchant": "Organic India USA (official)",
+  "country": "USA",
+  "currency": "USD",
+  "url": "https://shop.organicindiausa.com/products/ashwagandha",
+  "herb": "ashwagandha",
+  "conds": [
+   "C-NEUROPATHY-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Direct fetch returned 200 on 2026-09-29. Availability may vary by region. Avoid in pregnancy."
+ },
+ {
+  "pid": "P-RUMALAYA-01",
+  "name": "Himalaya Rumalaya Forte",
+  "brand": "Himalaya",
+  "cat": "Herbal supplement",
+  "desc": "Joint-comfort herbal preparation for mobility routines.",
+  "merchant": "Himalaya India (official)",
+  "country": "India",
+  "currency": "INR",
+  "url": "https://himalayawellness.in/products/rumalaya-forte",
+  "herb": "boswellia",
+  "conds": [
+   "C-OSTEOARTHRITIS-001"
+  ],
+  "evidence": "Some evidence",
+  "verified": "2026-09-29",
+  "status": "approved",
+  "version": "1.0",
+  "notes": "Direct fetch returned 200 on 2026-09-29. Availability may vary by region."
+ }
+]

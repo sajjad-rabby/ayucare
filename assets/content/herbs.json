@@ -1,0 +1,452 @@
+[
+ {
+  "id": "neem",
+  "name": "Neem",
+  "scientific": "Azadirachta indica",
+  "alt": "Indian lilac, Nimba",
+  "desc": "A tree widely used in traditional Indian medicine for skin and cleansing routines.",
+  "traditional": "Traditionally used for skin comfort, oral care, and general cleansing practices.",
+  "research": "Laboratory studies show antimicrobial activity; small clinical studies exist for skin uses with mixed results.",
+  "evidence": "Limited evidence",
+  "forms": "tablets, powders, oils, soaps, face wash",
+  "safety": "Generally used traditionally; skin patch-testing advised for topicals.",
+  "contra": "Pregnancy (internal use) without clinician advice.",
+  "interactions": "May interact with diabetes and immune medicines; check with a clinician.",
+  "pregnancy": "Avoid internal use unless advised.",
+  "children": "Topical use common; supervise young children.",
+  "sources": [
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ],
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "aloe-vera",
+  "name": "Aloe Vera",
+  "scientific": "Aloe barbadensis miller",
+  "alt": "Ghritkumari, Burn plant",
+  "desc": "A succulent plant whose gel is traditionally applied to skin.",
+  "traditional": "Traditionally used for skin soothing, minor burns comfort, and digestive routines.",
+  "research": "Some evidence for skin hydration and minor-burn comfort; digestive evidence limited.",
+  "evidence": "Some evidence",
+  "forms": "gel, juice, capsules",
+  "safety": "Topical use generally mild; latex part (aloin) can irritate and act as laxative.",
+  "contra": "Known plant allergy.",
+  "interactions": "Oral latex may interact with medicines affecting minerals and blood sugar.",
+  "pregnancy": "Avoid oral latex; topical use discuss with clinician.",
+  "children": "Topical use common; supervise.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/health/aloe-vera"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "turmeric",
+  "name": "Turmeric",
+  "scientific": "Curcuma longa",
+  "alt": "Haldi, Haridra",
+  "desc": "A golden spice central to cooking and traditional medicine.",
+  "traditional": "Traditionally used for joint comfort, digestion, and skin routines.",
+  "research": "Curcumin has been studied in many small trials; absorption is poor and results mixed.",
+  "evidence": "Some evidence",
+  "forms": "powder, capsules, teas, pastes",
+  "safety": "Culinary use safe; high-dose supplements need clinician input.",
+  "contra": "Gallbladder obstruction.",
+  "interactions": "May interact with blood thinners and diabetes medicines.",
+  "pregnancy": "Culinary amounts fine; supplements need advice.",
+  "children": "Culinary use fine.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/health/turmeric-and-curcumin-what-you-need-to-know"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "tulsi",
+  "name": "Tulsi (Holy Basil)",
+  "scientific": "Ocimum tenuiflorum",
+  "alt": "Holy basil, Ocimum sanctum",
+  "desc": "A revered adaptogenic herb widely consumed as tea.",
+  "traditional": "Traditionally used for respiratory comfort, stress routines, and daily wellness teas.",
+  "research": "Small trials suggest stress and metabolic markers may shift; evidence preliminary.",
+  "evidence": "Preliminary research",
+  "forms": "teas, capsules, powders",
+  "safety": "Tea use generally mild; discuss concentrated extracts with a clinician.",
+  "contra": "None established for tea.",
+  "interactions": "May interact with blood-sugar and blood-pressure medicines.",
+  "pregnancy": "Tea in moderation generally used; extracts need advice.",
+  "children": "Mild teas commonly given; supervise.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "ginger",
+  "name": "Ginger",
+  "scientific": "Zingiber officinale",
+  "alt": "Adrak, Shunti",
+  "desc": "A warming rhizome used worldwide in food and traditional medicine.",
+  "traditional": "Traditionally used for digestive comfort, nausea routines, and cold-season teas.",
+  "research": "Reasonable evidence for nausea relief; other uses mixed.",
+  "evidence": "Some evidence",
+  "forms": "fresh, dried, teas, capsules, oils",
+  "safety": "Culinary use safe; large doses may cause heartburn.",
+  "contra": "Gallstone disease caution.",
+  "interactions": "High doses may interact with blood thinners.",
+  "pregnancy": "Small culinary amounts generally used; supplements need advice.",
+  "children": "Mild teas commonly used.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/health/ginger"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "honey",
+  "name": "Honey",
+  "scientific": "Apis mellifera product",
+  "alt": "Shahad, Madhu",
+  "desc": "A natural sweetener traditionally used for throat soothing.",
+  "traditional": "Traditionally used for cough and throat comfort in warm fluids.",
+  "research": "Some evidence for nighttime cough soothing in children over one year.",
+  "evidence": "Some evidence",
+  "forms": "raw, processed, lozenges",
+  "safety": "NEVER for infants under 12 months (botulism risk).",
+  "contra": "Infant age.",
+  "interactions": "Minimal; sugar content matters in diabetes.",
+  "pregnancy": "Generally used in food amounts.",
+  "children": "Only above 12 months.",
+  "sources": [
+   [
+    "WHO",
+    "https://www.who.int/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "triphala",
+  "name": "Triphala",
+  "scientific": "Amalaki + Haritaki + Bibhitaki",
+  "alt": "Triphala churna",
+  "desc": "A classic three-fruit Ayurvedic preparation for digestive regularity.",
+  "traditional": "Classically used for bowel regularity and digestive balance.",
+  "research": "Small studies on bowel function with mixed results.",
+  "evidence": "Some evidence",
+  "forms": "powder (churna), tablets",
+  "safety": "Follow label doses; prolonged use needs review.",
+  "contra": "Bowel obstruction symptoms; pregnancy without advice.",
+  "interactions": "May affect fluid/mineral medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "giloy",
+  "name": "Giloy (Guduchi)",
+  "scientific": "Tinospora cordifolia",
+  "alt": "Guduchi, Amrita",
+  "desc": "A climbing shrub central to Ayurvedic fever-care traditions.",
+  "traditional": "Traditionally used in fever care and general wellness routines.",
+  "research": "Early small studies; liver-safety signals reported in rare cases — medical supervision advised.",
+  "evidence": "Preliminary research",
+  "forms": "juice, tablets, powder",
+  "safety": "Rare liver-injury reports exist; use only with clinician awareness.",
+  "contra": "Liver disease without supervision.",
+  "interactions": "May interact with immune and diabetes medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "amla",
+  "name": "Amla",
+  "scientific": "Phyllanthus emblica",
+  "alt": "Indian gooseberry, Amalaki",
+  "desc": "A vitamin-C-rich fruit used in food and traditional preparations.",
+  "traditional": "Traditionally used for digestion, hair routines, and general vitality.",
+  "research": "Nutrient-rich; clinical outcome evidence limited.",
+  "evidence": "Traditional use",
+  "forms": "fresh, juice, powder, candy",
+  "safety": "Food use safe; concentrated doses need input.",
+  "contra": "None established for food.",
+  "interactions": "High doses may affect blood sugar medicines.",
+  "pregnancy": "Food amounts fine.",
+  "children": "Food amounts fine.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bhumi-amla",
+  "name": "Bhumi Amla",
+  "scientific": "Phyllanthus niruri",
+  "alt": "Stonebreaker, Bhumyamalaki",
+  "desc": "A small herb traditionally associated with liver and urinary comfort.",
+  "traditional": "Classically referenced for liver and urinary routines.",
+  "research": "Early laboratory and small clinical work; not established treatment.",
+  "evidence": "Preliminary research",
+  "forms": "tablets, powders, teas",
+  "safety": "Use under qualified guidance, especially with liver conditions.",
+  "contra": "Liver disease without supervision.",
+  "interactions": "May interact with liver-metabolized medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "peppermint",
+  "name": "Peppermint",
+  "scientific": "Mentha piperita",
+  "alt": "Pudina",
+  "desc": "A cooling aromatic herb used for head and digestive comfort.",
+  "traditional": "Traditionally used for head comfort routines and digestion.",
+  "research": "Peppermint oil has small studies for tension-type headache; evidence limited.",
+  "evidence": "Limited evidence",
+  "forms": "oil (diluted), teas, balms",
+  "safety": "Essential oil must be diluted; keep from young children's faces.",
+  "contra": "Undiluted oil on skin; infants for strong preparations.",
+  "interactions": "Check with reflux medicines.",
+  "pregnancy": "Mild tea use common; oil needs advice.",
+  "children": "Dilution and supervision essential.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/health/peppermint-oil"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "boswellia",
+  "name": "Boswellia (Shallaki)",
+  "scientific": "Boswellia serrata",
+  "alt": "Shallaki, Indian frankincense",
+  "desc": "A resin traditionally used for joint comfort.",
+  "traditional": "Classically referenced for joint and mobility routines.",
+  "research": "Small trials for joint comfort with mixed results.",
+  "evidence": "Some evidence",
+  "forms": "capsules, tablets",
+  "safety": "Generally tolerated; clinician input for long use.",
+  "contra": "Pregnancy without advice.",
+  "interactions": "May interact with blood thinners.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bakuchi",
+  "name": "Bakuchi",
+  "scientific": "Psoralea corylifolia",
+  "alt": "Babchi",
+  "desc": "A seed traditionally referenced for pigment-related routines.",
+  "traditional": "Classically referenced for skin pigment routines under strict supervision.",
+  "research": "Early studies exist; photosensitivity risk is significant.",
+  "evidence": "Preliminary research",
+  "forms": "oils, powders (practitioner use)",
+  "safety": "Causes sun sensitivity; NEVER casual use.",
+  "contra": "Unsupervised use; fair sun-sensitive skin caution.",
+  "interactions": "Avoid with other photosensitizing medicines.",
+  "pregnancy": "Avoid.",
+  "children": "Practitioner supervision only.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "gokshura",
+  "name": "Gokshura",
+  "scientific": "Tribulus terrestris",
+  "alt": "Puncture vine",
+  "desc": "A herb traditionally associated with urinary comfort.",
+  "traditional": "Classically referenced for urinary routines.",
+  "research": "Limited modern evidence for urinary outcomes.",
+  "evidence": "Traditional use",
+  "forms": "tablets, powders",
+  "safety": "Use under guidance with kidney conditions.",
+  "contra": "Kidney obstruction or infection signs.",
+  "interactions": "Diuretic-type effects may shift fluids/minerals.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "ashwagandha",
+  "name": "Ashwagandha",
+  "scientific": "Withania somnifera",
+  "alt": "Indian ginseng",
+  "desc": "An adaptogenic root widely used for stress and sleep routines.",
+  "traditional": "Traditionally used for stress routines, sleep support, and vitality.",
+  "research": "Small trials suggest stress/sleep marker shifts; rare liver signals reported.",
+  "evidence": "Some evidence",
+  "forms": "capsules, powders, teas",
+  "safety": "Use with clinician awareness; rare liver-injury reports.",
+  "contra": "Pregnancy (avoid); thyroid medicines caution.",
+  "interactions": "May add to sedatives; thyroid and immune medicines.",
+  "pregnancy": "Avoid.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/health/ashwagandha"
+   ],
+   [
+    "MedlinePlus",
+    "https://medlineplus.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ }
+]
