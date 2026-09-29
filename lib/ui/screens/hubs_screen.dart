@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../data/skin_articles.dart';
+import '../../configuration/app_config.dart';
 import '../../main.dart';
 import '../../theme/ayu_theme.dart';
 import '../widgets/ayu_widgets.dart';
@@ -20,71 +22,77 @@ Future<void> openExternal(BuildContext context, String url) async {
 }
 
 // ---------- Skin Health reads (verified reputable links) ----------
-const _skinReads = [
-  (
-    'Acne: causes and care',
-    'American Academy of Dermatology',
-    'https://www.aad.org/public/diseases/acne'
-  ),
-  (
-    'Eczema resource center',
-    'American Academy of Dermatology',
-    'https://www.aad.org/public/diseases/eczema'
-  ),
-  (
-    'Psoriasis resource center',
-    'American Academy of Dermatology',
-    'https://www.aad.org/public/diseases/psoriasis'
-  ),
-  (
-    'Skin care basics',
-    'American Academy of Dermatology',
-    'https://www.aad.org/public/everyday-care/skin-care-basics'
-  ),
-  ('Acne guide', 'NHS', 'https://www.nhs.uk/conditions/acne/'),
-  ('Eczema guide', 'NHS', 'https://www.nhs.uk/conditions/atopic-eczema/'),
-  ('Psoriasis guide', 'NHS', 'https://www.nhs.uk/conditions/psoriasis/'),
-  ('Acne overview', 'MedlinePlus', 'https://medlineplus.gov/acne.html'),
-  ('Eczema overview', 'MedlinePlus', 'https://medlineplus.gov/eczema.html'),
-  (
-    'Psoriasis overview',
-    'MedlinePlus',
-    'https://medlineplus.gov/psoriasis.html'
-  ),
-];
-
+// ---------- Skin Health library (10 full in-app articles) ----------
 class SkinReadsScreen extends StatelessWidget {
   const SkinReadsScreen({super.key});
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Skin Health Reads')),
+        appBar: AppBar(title: const Text('Skin Health Library')),
         body: ListView.separated(
           padding: const EdgeInsets.all(AyuSpacing.m),
-          itemCount: _skinReads.length,
+          itemCount: skinArticles.length,
           separatorBuilder: (_, __) => const SizedBox(height: AyuSpacing.s),
           itemBuilder: (context, i) {
-            final r = _skinReads[i];
+            final a = skinArticles[i];
             return Card(
               child: ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Theme.of(context)
-                      .colorScheme
-                      .primary
-                      .withValues(alpha: 0.12),
+                leading: Container(
+                  padding: const EdgeInsets.all(AyuSpacing.s),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context)
+                        .colorScheme
+                        .primary
+                        .withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(AyuRadius.s),
+                  ),
                   child: Text('${i + 1}',
                       style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary)),
+                          color: Theme.of(context).colorScheme.primary,
+                          fontWeight: FontWeight.w700)),
                 ),
-                title: Text(r.$1),
-                subtitle: Text('${r.$2} · External article'),
-                trailing: const Icon(Icons.open_in_new, size: 20),
-                onTap: () => openExternal(context, r.$3),
+                title: Text(a.title),
+                subtitle: Text('${a.minutes} min read · in-app guide'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => SkinArticleScreen(article: a))),
               ),
             );
           },
         ),
       );
 }
+
+class SkinArticleScreen extends StatelessWidget {
+  const SkinArticleScreen({super.key, required this.article});
+  final SkinArticle article;
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(title: Text(article.title)),
+        body: ListView(
+          padding: const EdgeInsets.all(AyuSpacing.m),
+          children: [
+            Text(article.intro,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(fontStyle: FontStyle.italic)),
+            const SizedBox(height: AyuSpacing.s),
+            Text('${article.minutes} min read',
+                style: Theme.of(context).textTheme.bodySmall),
+            const SizedBox(height: AyuSpacing.m),
+            for (final s in article.sections) ...[
+              SectionCard(title: s.heading, child: Text(s.body)),
+            ],
+            const SafetyNotice(
+              title: 'Educational information only',
+              body: DisclaimerConfig.pageFooter,
+              level: NoticeLevel.info,
+            ),
+          ],
+        ),
+      );
+}
+
 
 // ---------- Exercises (interactive) ----------
 class _Exercise {

@@ -1,5 +1,6 @@
 import 'package:ayucare/data/content_repository.dart';
 import 'package:ayucare/data/models.dart';
+import 'package:ayucare/data/skin_articles.dart';
 import 'package:ayucare/data/todo_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -90,5 +91,12 @@ void main() {
     expect(back.title, 'Vitamins');
     expect(back.items.single.done, isTrue);
     expect(back.reminderAt?.hour, 8);
+  });
+
+  test('skin library holds 10 complete in-app articles', () {
+    expect(skinArticles.length, 10);
+    for (final a in skinArticles) {
+      expect(a.sections.length, greaterThanOrEqualTo(3), reason: a.id);
+    }
   });
 }
