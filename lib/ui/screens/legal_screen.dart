@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../configuration/app_config.dart';
 import '../../theme/ayu_theme.dart';
+import '../widgets/ayu_widgets.dart';
 
 class _LegalShell extends StatelessWidget {
   const _LegalShell({required this.title, required this.body});
@@ -18,13 +19,31 @@ class _LegalShell extends StatelessWidget {
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
   @override
-  Widget build(BuildContext context) => _LegalShell(
-      title: 'About AyuCare',
-      body:
-          'AyuCare is an educational health and Ayurveda reference. Browse conditions A–Z, '
-          'search symptoms and herbs, read traditional and evidence information with sources, '
-          'and save items for later — all offline.\n\nVersion ${AppConfig.version} · '
-          'Content v${AppConfig.contentVersion}\n${DisclaimerConfig.friendlyLine}');
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(title: const Text('About AyuCare')),
+        body: ListView(
+          padding: const EdgeInsets.all(AyuSpacing.m),
+          children: const [
+            Text(
+                'AyuCare is an educational health and Ayurveda reference. Browse conditions A–Z, '
+                'search symptoms and herbs, read traditional and evidence information with sources, '
+                'and save items for later — all offline.'),
+            SizedBox(height: 16),
+            SafetyNoticeRef(),
+          ],
+        ),
+      );
+}
+
+class SafetyNoticeRef extends StatelessWidget {
+  const SafetyNoticeRef({super.key});
+  @override
+  Widget build(BuildContext context) => const SafetyNotice(
+        title: 'AyuCare Safety Notice',
+        body:
+            '${DisclaimerConfig.homeNotice} Tap below for the full disclaimer.',
+        level: NoticeLevel.info,
+      );
 }
 
 class DisclaimerPage extends StatelessWidget {
@@ -72,9 +91,8 @@ class AffiliatePage extends StatelessWidget {
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
   @override
-  Widget build(BuildContext context) => _LegalShell(
+  Widget build(BuildContext context) => const _LegalShell(
       title: 'Contact',
-      body:
-          'Questions, corrections, or source suggestions: ${AppConfig.contactEmail}\n\n'
-          'Content feedback helps the editorial review cycle.');
+      body: 'Questions, corrections, or source suggestions: contact us on '
+          'Facebook: /NerdAlpha\n\nContent feedback helps the editorial review cycle.');
 }

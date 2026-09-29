@@ -1,65 +1,180 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../main.dart';
 import '../../theme/ayu_theme.dart';
 import 'condition_screen.dart';
 
 class AzScreen extends StatelessWidget {
-  const AzScreen({super.key});
+  const AzScreen({super.key, this.push = false});
+  final bool push;
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Explore A–Z')),
-        body: const Padding(
-          padding: EdgeInsets.all(AyuSpacing.m),
-          child: AzGrid(navigate: true),
-        ),
-      );
+  Widget build(BuildContext context) {
+    final body = const WheelExplorer();
+    if (!push) {
+      return Scaffold(
+          appBar: AppBar(title: const Text('Explore A–Z')), body: body);
+    }
+    return Scaffold(
+        appBar: AppBar(title: const Text('Diseases & Treatment')), body: body);
+  }
 }
 
-class AzGrid extends StatelessWidget {
-  const AzGrid({super.key, this.navigate = false});
-  final bool navigate;
+/// Glossy rolling letter wheel. The centered letter is the selection;
+/// tapping it (or Open) goes to that letter's conditions.
+class WheelExplorer extends StatefulWidget {
+  const WheelExplorer({super.key});
+  @override
+  State<WheelExplorer> createState() => _WheelExplorerState();
+}
+
+class _WheelExplorerState extends State<WheelExplorer> {
+  late final FixedExtentScrollController _ctrl;
+  int _sel = 0;
+  Timer? _settle;
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl = FixedExtentScrollController();
+  }
+
+  @override
+  void dispose() {
+    _settle?.cancel();
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  void _open(String letter) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => LetterScreen(letter: letter)));
+  }
+
   @override
   Widget build(BuildContext context) {
     final repo = Scope.of(context);
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 7,
-        mainAxisSpacing: 8,
-        crossAxisSpacing: 8,
-      ),
-      itemCount: repo.letters.length,
-      itemBuilder: (context, i) {
-        final letter = repo.letters[i];
-        final n = repo.byLetter(letter).length;
-        return GestureDetector(
-          onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => LetterScreen(letter: letter))),
-          child: Container(
-            decoration: BoxDecoration(
-              color: Theme.of(context).cardTheme.color,
-              borderRadius: BorderRadius.circular(AyuRadius.s),
-              border: Border.all(
-                  color: Theme.of(context)
-                      .colorScheme
-                      .primary
-                      .withValues(alpha: 0.25)),
-            ),
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(letter,
-                    style: Theme.of(context).textTheme.titleMedium,
-                    semanticsLabel: 'Letter $letter, $n conditions'),
-                if (n > 0)
-                  Text('$n', style: Theme.of(context).textTheme.bodySmall),
-              ],
-            ),
+    final letters = repo.letters;
+    return Column(
+      children: [
+        const SizedBox(height: AyuSpacing.m),
+        Text('Roll to a letter',
+            style: Theme.of(context).textTheme.titleMedium),
+        const SizedBox(height: AyuSpacing.s),
+        Expanded(
+          child: Stack(
+            children: [
+              ListWheelScrollView.useDelegate(
+                controller: _ctrl,
+                itemExtent: 64,
+                diameterRatio: 1.6,
+                perspective: 0.004,
+                useMagnifier: true,
+                magnification: 1.25,
+                physics: const FixedExtentScrollPhysics(),
+                onSelectedItemChanged: (i) {
+                  setState(() => _sel = i);
+                  _settle?.cancel();
+                  _settle = Timer(const Duration(milliseconds: 1200), () {
+                    if (mounted) _open(letters[_sel]);
+                  });
+                },
+                childDelegate: ListWheelChildBuilderDelegate(
+                  childCount: letters.length,
+                  builder: (context, i) {
+                    final active = i == _sel;
+                    final n = repo.byLetter(letters[i]).length;
+                    return GestureDetector(
+                      onTap: () => _open(letters[i]),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 64, vertical: 4),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(AyuRadius.m),
+                          gradient: active
+                              ? LinearGradient(colors: [
+                                  Theme.of(context).colorScheme.primary,
+                                  Theme.of(context)
+                                      .colorScheme
+                                      .primary
+                                      .withValues(alpha: 0.75),
+                                ])
+                              : null,
+                          color: active
+                              ? null
+                              : Theme.of(context)
+                                  .cardTheme
+                                  .color
+                                  ?.withValues(alpha: 0.6),
+                          border: Border.all(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .primary
+                                  .withValues(alpha: active ? 0.9 : 0.25)),
+                          boxShadow: active
+                              ? [
+                                  BoxShadow(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .primary
+                                          .withValues(alpha: 0.35),
+                                      blurRadius: 18,
+                                      offset: const Offset(0, 6))
+                                ]
+                              : null,
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          '${letters[i]}${n > 0 ? '  ·  $n' : ''}',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
+                              ?.copyWith(
+                                color: active
+                                    ? Colors.white
+                                    : Theme.of(context).colorScheme.onSurface,
+                              ),
+                          semanticsLabel:
+                              'Letter ${letters[i]}, $n conditions. Tap to open.',
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              // Glossy sheen overlays (non-interactive)
+              IgnorePointer(
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Theme.of(context)
+                            .scaffoldBackgroundColor
+                            .withValues(alpha: 0.85),
+                        Colors.transparent,
+                        Colors.transparent,
+                        Theme.of(context)
+                            .scaffoldBackgroundColor
+                            .withValues(alpha: 0.85),
+                      ],
+                      stops: const [0.0, 0.3, 0.7, 1.0],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-        );
-      },
+        ),
+        Padding(
+          padding: const EdgeInsets.all(AyuSpacing.m),
+          child: FilledButton(
+            onPressed: () => _open(letters[_sel]),
+            child: Text('Open ${letters[_sel]}'),
+          ),
+        ),
+      ],
     );
   }
 }

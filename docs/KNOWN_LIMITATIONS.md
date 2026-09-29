@@ -9,3 +9,8 @@
 6. Name/trademark/domain clearance: Sajjad's manual check required.
 7. Policy snapshot: re-verify Health policies at submission time.
 8. Backend: local-only; no remote updates yet (import pipeline ready).
+9. Daily reminders are scheduled on-device and do not yet re-arm after a
+   phone reboot (reopen the app once after reboot). Times: 7 AM movement,
+   8 PM water (device timezone).
+10. Pixabay/Pexels API keys were never provided to the agent — condition
+    imagery stays Missing until keys or assets are supplied.

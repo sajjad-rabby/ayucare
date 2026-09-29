@@ -31,6 +31,8 @@ class Condition {
         keywords = _strList(j['keywords']),
         reviewed = j['last_reviewed'] as String,
         version = j['version'] as String,
+        dietYes = _strList(j['diet_yes']),
+        dietNo = _strList(j['diet_no']),
         sources = (j['sources'] as List)
             .map((s) => SourceRef((s as List)[0] as String, (s)[1] as String))
             .toList();
@@ -46,6 +48,7 @@ class Condition {
   final String interactions, pregnancy, children, elderly;
   final List<String> relatedConditions, relatedSymptoms, keywords;
   final String reviewed, version;
+  final List<String> dietYes, dietNo;
   final List<SourceRef> sources;
 
   static List<String> _strList(Object? v) =>

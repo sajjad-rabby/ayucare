@@ -84,6 +84,19 @@
     "MedlinePlus",
     "https://medlineplus.gov/acne.html"
    ]
+  ],
+  "diet_yes": [
+   "Vegetables and fruits",
+   "Whole grains",
+   "Water through the day",
+   "Green tea (unsweetened)",
+   "Nuts in small amounts"
+  ],
+  "diet_no": [
+   "Excess sugary drinks",
+   "Deep-fried snacks",
+   "Skim-milk excess for sensitive skin",
+   "Very greasy fast food"
   ]
  },
  {
@@ -170,6 +183,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/acutebronchitis.html"
    ]
+  ],
+  "diet_yes": [
+   "Warm water and soups",
+   "Honey-ginger fluids (12m+)",
+   "Fruits rich in vitamin C",
+   "Light khichdi-style meals"
+  ],
+  "diet_no": [
+   "Smoking and smoke exposure",
+   "Very cold drinks during fits",
+   "Dusty irritant foods"
   ]
  },
  {
@@ -257,6 +281,18 @@
     "MedlinePlus",
     "https://medlineplus.gov/constipation.html"
    ]
+  ],
+  "diet_yes": [
+   "High-fibre vegetables",
+   "Fruits with skin (guava, pear)",
+   "Whole grains and lentils",
+   "Plenty of water",
+   "Soaked raisins or figs"
+  ],
+  "diet_no": [
+   "Refined flour excess",
+   "Very low-fluid days",
+   "Excess cheese or processed snacks"
   ]
  },
  {
@@ -343,6 +379,17 @@
     "CDC",
     "https://www.cdc.gov/dengue/"
    ]
+  ],
+  "diet_yes": [
+   "Oral rehydration fluids",
+   "Light soups and porridge",
+   "Coconut water",
+   "Fruits"
+  ],
+  "diet_no": [
+   "Aspirin/NSAIDs without advice",
+   "Alcohol",
+   "Dehydrating sugary sodas"
   ]
  },
  {
@@ -427,6 +474,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/eczema.html"
    ]
+  ],
+  "diet_yes": [
+   "Balanced home meals",
+   "Water",
+   "Omega-rich foods (fish, flaxseed)",
+   "Probiotic curd"
+  ],
+  "diet_no": [
+   "Known personal trigger foods",
+   "Excess alcohol",
+   "Very spicy excess for sensitive skin"
   ]
  },
  {
@@ -518,6 +576,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/fever.html"
    ]
+  ],
+  "diet_yes": [
+   "Fluids and ORS when needed",
+   "Light soups",
+   "Fruits",
+   "Rest-friendly light meals"
+  ],
+  "diet_no": [
+   "Heavy oily meals",
+   "Caffeine excess",
+   "Alcohol"
   ]
  },
  {
@@ -607,6 +676,19 @@
     "MedlinePlus",
     "https://medlineplus.gov/stomachdisorders.html"
    ]
+  ],
+  "diet_yes": [
+   "Oatmeal and soft rice",
+   "Bananas",
+   "Cooked vegetables",
+   "Curd in moderation"
+  ],
+  "diet_no": [
+   "Spicy food",
+   "Fried food",
+   "Citrus excess",
+   "Caffeine and alcohol",
+   "Late heavy meals"
   ]
  },
  {
@@ -696,6 +778,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/headache.html"
    ]
+  ],
+  "diet_yes": [
+   "Regular meals (no skipping)",
+   "Water",
+   "Magnesium-rich nuts and greens"
+  ],
+  "diet_no": [
+   "Skipped meals",
+   "Excess caffeine",
+   "Alcohol",
+   "Very strong cheese for sensitive people"
   ]
  },
  {
@@ -784,6 +877,17 @@
     "CDC",
     "https://www.cdc.gov/flu/"
    ]
+  ],
+  "diet_yes": [
+   "Warm fluids and soups",
+   "Fruits",
+   "Light balanced meals",
+   "Honey fluids (12m+)"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Smoking",
+   "Heavy greasy meals while feverish"
   ]
  },
  {
@@ -874,6 +978,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/jaundice.html"
    ]
+  ],
+  "diet_yes": [
+   "Light low-fat meals",
+   "Glucose fluids as advised",
+   "Fruits and vegetables",
+   "Plenty of rest with fluids"
+  ],
+  "diet_no": [
+   "Alcohol strictly",
+   "Oily and fried food",
+   "Unsupervised herbal mixtures"
   ]
  },
  {
@@ -961,6 +1076,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/kidneystones.html"
    ]
+  ],
+  "diet_yes": [
+   "Plenty of water",
+   "Citrus fruits",
+   "Balanced low-salt meals"
+  ],
+  "diet_no": [
+   "Excess salt",
+   "Very high oxalate excess without advice",
+   "Dehydration",
+   "Cola excess"
   ]
  },
  {
@@ -1043,6 +1169,17 @@
     "NHS",
     "https://www.nhs.uk/conditions/laryngitis/"
    ]
+  ],
+  "diet_yes": [
+   "Warm fluids",
+   "Honey fluids (12m+)",
+   "Soft foods",
+   "Rest voice with fluids"
+  ],
+  "diet_no": [
+   "Smoking",
+   "Very cold drinks",
+   "Shouting over soreness"
   ]
  },
  {
@@ -1128,6 +1265,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/migraine.html"
    ]
+  ],
+  "diet_yes": [
+   "Regular meals",
+   "Water",
+   "Magnesium-rich foods"
+  ],
+  "diet_no": [
+   "Skipped meals",
+   "Alcohol",
+   "Excess caffeine",
+   "Known personal triggers"
   ]
  },
  {
@@ -1215,6 +1363,16 @@
     "MedlinePlus",
     "https://medlineplus.gov/peripheralnervedisorders.html"
    ]
+  ],
+  "diet_yes": [
+   "Balanced meals with B12 sources",
+   "Vegetables and lentils",
+   "Milk or alternatives"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Uncontrolled sugar excess",
+   "Very low-nutrient diets"
   ]
  },
  {
@@ -1301,6 +1459,17 @@
     "MedlinePlus",
     "https://medlineplus.gov/osteoarthritis.html"
    ]
+  ],
+  "diet_yes": [
+   "Vegetables and fruits",
+   "Fish and healthy fats",
+   "Calcium and vitamin D sources",
+   "Healthy weight meals"
+  ],
+  "diet_no": [
+   "Excess weight-gain snacking",
+   "Sugary drinks",
+   "Alcohol excess"
   ]
  },
  {
@@ -1388,6 +1557,16 @@
     "MedlinePlus",
     "https://medlineplus.gov/psoriasis.html"
    ]
+  ],
+  "diet_yes": [
+   "Vegetables and fruits",
+   "Whole grains",
+   "Healthy fats"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Smoking",
+   "Known personal trigger foods"
   ]
  },
  {
@@ -1472,6 +1651,15 @@
     "NHS",
     "https://www.nhs.uk/conditions/"
    ]
+  ],
+  "diet_yes": [
+   "Balanced recovery meals",
+   "Fluids",
+   "Fruits"
+  ],
+  "diet_no": [
+   "Alcohol during recovery",
+   "Raw unpasteurized dairy near livestock areas"
   ]
  },
  {
@@ -1558,6 +1746,15 @@
     "MedlinePlus",
     "https://medlineplus.gov/tineainfections.html"
    ]
+  ],
+  "diet_yes": [
+   "Balanced meals supporting immunity",
+   "Water",
+   "Probiotic curd"
+  ],
+  "diet_no": [
+   "Sharing personal items (hygiene, not diet)",
+   "Sugary excess"
   ]
  },
  {
@@ -1649,6 +1846,16 @@
     "MedlinePlus",
     "https://medlineplus.gov/sinusitis.html"
    ]
+  ],
+  "diet_yes": [
+   "Warm fluids and steam-friendly soups",
+   "Spicy-warm broths in moderation",
+   "Fruits"
+  ],
+  "diet_no": [
+   "Smoking",
+   "Dusty irritants",
+   "Excess dairy if personally congesting"
   ]
  },
  {
@@ -1736,6 +1943,16 @@
     "MedlinePlus",
     "https://medlineplus.gov/tonsillitis.html"
    ]
+  ],
+  "diet_yes": [
+   "Warm fluids",
+   "Honey fluids (12m+)",
+   "Soft foods",
+   "Soups"
+  ],
+  "diet_no": [
+   "Smoking",
+   "Very spicy or crunchy foods during soreness"
   ]
  },
  {
@@ -1820,6 +2037,16 @@
     "MedlinePlus",
     "https://medlineplus.gov/ulcerativecolitis.html"
    ]
+  ],
+  "diet_yes": [
+   "Clinician-advised meal plan",
+   "Low-residue foods during flares as advised",
+   "Hydration"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Known personal trigger foods",
+   "Self-imposed extreme diets"
   ]
  },
  {
@@ -1896,6 +2123,15 @@
     "MedlinePlus",
     "https://medlineplus.gov/vitiligo.html"
    ]
+  ],
+  "diet_yes": [
+   "Balanced varied diet",
+   "Fruits and vegetables",
+   "Vitamin-rich foods"
+  ],
+  "diet_no": [
+   "No proven diet cure exists — beware restrictive claims",
+   "Unsupervised mega-doses"
   ]
  },
  {
@@ -1980,6 +2216,15 @@
     "CDC",
     "https://www.cdc.gov/pertussis/"
    ]
+  ],
+  "diet_yes": [
+   "Fluids",
+   "Small frequent meals",
+   "Honey fluids (12m+)"
+  ],
+  "diet_no": [
+   "Smoking exposure",
+   "Dusty irritants"
   ]
  },
  {
@@ -2064,6 +2309,16 @@
     "NHS",
     "https://www.nhs.uk/conditions/"
    ]
+  ],
+  "diet_yes": [
+   "Water-rich fruits and vegetables",
+   "Healthy fats",
+   "Plenty of water"
+  ],
+  "diet_no": [
+   "Excess caffeine",
+   "Alcohol",
+   "Very hot spicy excess for sensitive skin"
   ]
  },
  {
@@ -2148,6 +2403,15 @@
     "CDC",
     "https://www.cdc.gov/yellowfever/"
    ]
+  ],
+  "diet_yes": [
+   "Light fluids and soups",
+   "Fruits",
+   "Rest with hydration"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Aspirin/NSAIDs without advice"
   ]
  },
  {
@@ -2231,6 +2495,15 @@
     "CDC",
     "https://www.cdc.gov/zika/"
    ]
+  ],
+  "diet_yes": [
+   "Fluids and rest foods",
+   "Fruits",
+   "Light balanced meals"
+  ],
+  "diet_no": [
+   "Alcohol",
+   "Dehydrating routines"
   ]
  }
 ]

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../configuration/app_config.dart';
@@ -8,8 +10,8 @@ import '../../theme/ayu_theme.dart';
 import '../widgets/ayu_widgets.dart';
 import 'herb_screen.dart';
 
-/// Condition page order: info → warnings → care → herbal (+safety) →
-/// evidence → safety → products (+disclaimers) → sources → footer.
+/// Condition page order: identity+about → symptoms → warnings → care →
+/// risk → herbal → diet → evidence → safety → products (+disclaimers).
 class ConditionScreen extends StatefulWidget {
   const ConditionScreen({super.key, required this.id});
   final String id;
@@ -48,13 +50,35 @@ class _ConditionScreenState extends State<ConditionScreen> {
         title: Text(c.name),
         actions: [
           IconButton(
+            icon: const Icon(Icons.copy_outlined),
+            tooltip: 'Copy summary',
+            onPressed: () async {
+              final messenger = ScaffoldMessenger.of(context);
+              await Clipboard.setData(ClipboardData(
+                  text: '${c.name} — ${c.short}\nLearn about it in AyuCare.'));
+              messenger.showSnackBar(
+                  const SnackBar(content: Text('Summary copied.')));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.share_outlined),
+            tooltip: 'Share',
+            onPressed: () => SharePlus.instance.share(ShareParams(
+                text:
+                    '${c.name} — ${c.short}\nLearn about it in AyuCare.',
+                subject: c.name)),
+          ),
+          IconButton(
             icon: Icon(_saved ? Icons.bookmark : Icons.bookmark_outline),
             tooltip: _saved ? 'Remove bookmark' : 'Save',
             onPressed: () async {
+              final messenger = ScaffoldMessenger.of(context);
               final p = await SharedPreferences.getInstance();
               await SavedRepository(p).toggleCondition(c.id);
               if (!mounted) return;
               setState(() => _saved = !_saved);
+              messenger.showSnackBar(SnackBar(
+                  content: Text(_saved ? 'Saved.' : 'Removed from saved.')));
             },
           ),
         ],
@@ -62,7 +86,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
       body: ListView(
         padding: const EdgeInsets.all(AyuSpacing.m),
         children: [
-          // Hero identity card
+          // Identity + about merged
           Card(
             child: Padding(
               padding: const EdgeInsets.all(AyuSpacing.m),
@@ -79,13 +103,15 @@ class _ConditionScreenState extends State<ConditionScreen> {
                           .withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(AyuRadius.pill),
                     ),
-                    child: Text(c.category,
+                    child: Text('Selected Condition',
                         style: Theme.of(context).textTheme.labelLarge),
                   ),
                   const SizedBox(height: AyuSpacing.s),
                   Text(c.name, style: Theme.of(context).textTheme.displaySmall),
                   const SizedBox(height: AyuSpacing.xs),
                   Text(c.short),
+                  const SizedBox(height: AyuSpacing.s),
+                  Text(c.overview),
                   const SizedBox(height: AyuSpacing.xs),
                   Text('Last reviewed: ${c.reviewed} · v${c.version}',
                       style: Theme.of(context).textTheme.bodySmall),
@@ -100,10 +126,6 @@ class _ConditionScreenState extends State<ConditionScreen> {
             level: NoticeLevel.safety,
           ),
           SectionCard(
-              title: 'About',
-              icon: Icons.info_outline,
-              child: Text(c.overview)),
-          SectionCard(
               title: 'Common symptoms',
               icon: Icons.list_outlined,
               child: BulletList(items: c.symptoms)),
@@ -113,19 +135,17 @@ class _ConditionScreenState extends State<ConditionScreen> {
           SectionCard(
               title: 'Possible associated factors',
               child: BulletList(items: c.causes)),
-          SectionCard(title: 'Risk factors', child: BulletList(items: c.risks)),
-          SectionCard(
-              title: 'When to seek professional care',
-              icon: Icons.medical_services_outlined,
-              child: Text(c.care)),
           SafetyNotice(
             title: 'Urgent warning signs',
             body: c.redFlags.map((e) => '• $e').join('\n'),
             level: NoticeLevel.urgent,
           ),
-          SectionCard(title: 'Diagnosis overview', child: Text(c.diagnosis)),
-          SectionCard(title: 'General information', child: Text(c.management)),
-          // Traditional / herbal block + mandatory remedy notice
+          SectionCard(
+              title: 'When to seek professional care',
+              icon: Icons.medical_services_outlined,
+              child: Text(c.care)),
+          SectionCard(title: 'Risk factors', child: BulletList(items: c.risks)),
+          // Herbal block directly under risk factors
           SectionCard(
             title: 'Traditional herbal & Ayurvedic information',
             icon: Icons.spa_outlined,
@@ -152,6 +172,16 @@ class _ConditionScreenState extends State<ConditionScreen> {
             title: 'Before Trying a Home Remedy',
             body: DisclaimerConfig.herbalNotice,
             level: NoticeLevel.safety,
+          ),
+          SectionCard(
+            title: 'What to eat',
+            icon: Icons.restaurant_outlined,
+            child: BulletList(items: c.dietYes),
+          ),
+          SectionCard(
+            title: 'What to avoid',
+            icon: Icons.no_food_outlined,
+            child: BulletList(items: c.dietNo),
           ),
           SectionCard(
             title: 'Evidence & research',
@@ -233,31 +263,6 @@ class _ConditionScreenState extends State<ConditionScreen> {
                 level: NoticeLevel.info,
               ),
           ],
-          SectionCard(
-            title: 'Sources',
-            icon: Icons.library_books_outlined,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                for (final s in c.sources)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: AyuSpacing.xs),
-                    child: GestureDetector(
-                      onTap: () => _openExternal(context, s.url, s.org),
-                      child: Text('${s.org} — open reference',
-                          style: TextStyle(
-                              color: Theme.of(context).colorScheme.primary,
-                              decoration: TextDecoration.underline)),
-                    ),
-                  ),
-              ],
-            ),
-          ),
-          const SafetyNotice(
-            title: 'Educational information only',
-            body: DisclaimerConfig.pageFooter,
-            level: NoticeLevel.info,
-          ),
         ],
       ),
     );

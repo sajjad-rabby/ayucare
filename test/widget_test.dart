@@ -11,15 +11,18 @@ void main() {
     await repo.load();
   });
 
-  testWidgets('home shows brand, search, A-Z and safety notice',
+  testWidgets('home shows brand, search and hub cards (no A-Z grid)',
       (tester) async {
     await tester.pumpWidget(AyuCareApp(repo: repo));
-    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(seconds: 1));
     expect(find.text('AyuCare'), findsWidgets);
-    expect(find.text('Search conditions, symptoms or herbs…'), findsOneWidget);
-    expect(find.text('AyuCare Safety Notice'), findsOneWidget);
-    expect(find.text('Read Full Disclaimer'), findsOneWidget);
-    expect(find.text('F'), findsOneWidget);
+    expect(
+        find.text('Search conditions, symptoms or herbs…'), findsOneWidget);
+    expect(find.text('Diseases & Treatment'), findsOneWidget);
+    expect(find.text('Everyday Herbs'), findsOneWidget);
+    expect(find.text('AyuCare Safety Notice'), findsNothing);
+    expect(find.text('A–Z Explorer'), findsNothing);
   });
 
   test('all commercial flags are OFF for MVP', () {

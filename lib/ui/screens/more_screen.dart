@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../configuration/app_config.dart';
 import '../../theme/ayu_theme.dart';
 import 'legal_screen.dart';
+import 'reminders_screen.dart';
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key, required this.mode, required this.onMode});
@@ -24,7 +25,7 @@ class MoreScreen extends StatelessWidget {
                       child: Image.asset('assets/brand/ayucare_logo.jpg',
                           width: 52,
                           height: 52,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                           errorBuilder: (c, e, s) =>
                               const Icon(Icons.spa, size: 40)),
                     ),
@@ -64,6 +65,8 @@ class MoreScreen extends StatelessWidget {
                 )),
             _row(context, 'About AyuCare', Icons.info_outline,
                 page: const AboutPage()),
+            _row(context, 'Daily Reminders', Icons.notifications_outlined,
+                page: const RemindersScreen()),
             _row(
                 context, 'Medical Disclaimer', Icons.health_and_safety_outlined,
                 page: const DisclaimerPage()),

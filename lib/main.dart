@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../configuration/app_config.dart';
 import '../data/content_repository.dart';
+import '../services/reminder_service.dart';
 import '../theme/ayu_theme.dart';
 import 'ui/screens/az_screen.dart';
 import 'ui/screens/home_screen.dart';
@@ -12,6 +13,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final repo = ContentRepository();
   await repo.load();
+  try {
+    await ReminderService.init();
+  } catch (_) {
+    // Reminders are best-effort (permissions/OEM quirks) — app works without.
+  }
   runApp(AyuCareApp(repo: repo));
 }
 

@@ -234,6 +234,11 @@ PRODUCTS = [
   merchant="Himalaya India (official)", country="India", currency="INR",
   url="https://himalayawellness.in/products/rumalaya-forte",
   herb="boswellia", conds=["C-OSTEOARTHRITIS-001"], evidence="Some evidence", verified="2026-09-29", status="approved", version="1.0", notes="Direct fetch returned 200 on 2026-09-29. Availability may vary by region."),
+ dict(pid="P-TRIPHALA-IH-01", name="Organic India Triphala (180 caps)", brand="Organic India", cat="Herbal supplement",
+  desc="Triphala capsules for digestive-routine support.",
+  merchant="iHerb (global shipping)", country="USA", currency="USD",
+  url="https://www.iherb.com/pr/organic-india-triphala-180-vegetarian-caps/99128",
+  herb="triphala", conds=["C-CONSTIPATION-001"], evidence="Some evidence", verified="2026-09-29", status="approved", version="1.0", notes="Search-verified live listing (direct fetch bot-blocked like CDC/1mg). Global merchant; availability may vary."),
 ]
 
 SOURCES = [

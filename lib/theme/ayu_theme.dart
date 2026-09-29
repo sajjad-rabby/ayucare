@@ -34,16 +34,25 @@ class AyuRadius {
 }
 
 ThemeData ayuLightTheme() {
+  // Warm editorial light: cream ground, white cards, deep-green actions,
+  // antique-gold accents. AA contrast: ink #1C2620 on cream, white on primary.
   final scheme = ColorScheme.fromSeed(
     seedColor: AyuColors.primaryGreen,
     surface: Colors.white,
+    surfaceContainerLowest: AyuColors.cream,
   );
   return ThemeData(
     useMaterial3: true,
-    scaffoldBackgroundColor: AyuColors.cream,
+    scaffoldBackgroundColor: const Color(0xFFF7F2E4),
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFFF7F2E4),
+      foregroundColor: AyuColors.primaryGreen,
+      elevation: 0,
+    ),
     colorScheme: scheme.copyWith(
       primary: AyuColors.primaryGreen,
       secondary: AyuColors.antiqueGold,
+      tertiary: AyuColors.emerald,
     ),
     textTheme: const TextTheme(
       displaySmall: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),

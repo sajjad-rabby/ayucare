@@ -1,50 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../configuration/app_config.dart';
 import '../../main.dart';
 import '../../theme/ayu_theme.dart';
-import '../widgets/ayu_widgets.dart';
 import 'az_screen.dart';
-import 'legal_screen.dart';
+import 'hubs_screen.dart';
 import 'search_screen.dart';
-
-final _topics = [
-  (
-    'Digestive Health',
-    Icons.restaurant_outlined,
-    ['Constipation', 'Gastritis', 'Ulcerative Colitis']
-  ),
-  (
-    'Skin Health',
-    Icons.spa_outlined,
-    ['Acne', 'Eczema', 'Psoriasis', 'Ringworm', 'Vitiligo', 'Xeroderma']
-  ),
-  (
-    'Respiratory Health',
-    Icons.air_outlined,
-    [
-      'Bronchitis',
-      'Influenza',
-      'Laryngitis',
-      'Sinusitis',
-      'Tonsillitis',
-      'Whooping Cough'
-    ]
-  ),
-  (
-    'Brain & Nervous System',
-    Icons.psychology_outlined,
-    ['Headache', 'Migraine', 'Neuropathy']
-  ),
-  (
-    'Heart & Circulation',
-    Icons.favorite_outline,
-    ['Osteoarthritis', 'Dengue', 'Yellow Fever', 'Zika', 'Q Fever', 'Jaundice']
-  ),
-  ('Everyday Conditions', Icons.wb_sunny_outlined, ['Fever', 'Kidney Stones']),
-  ('Mental Wellbeing', Icons.self_improvement_outlined, []),
-  ("Women's Health", Icons.pregnant_woman_outlined, []),
-  ("Men's Health", Icons.man_outlined, []),
-];
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -52,6 +11,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final repo = Scope.of(context);
+    final skinCount =
+        repo.conditions.where((c) => c.category == 'Skin Health').length;
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -63,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                   child: Image.asset('assets/brand/ayucare_logo.jpg',
                       width: 44,
                       height: 44,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                       errorBuilder: (c, e, s) =>
                           const Icon(Icons.spa, size: 36)),
                 ),
@@ -79,41 +40,57 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                      'Explore health conditions, symptoms & herbal knowledge.',
+                      'Explore health knowledge. Discover nature\u2019s traditions.',
                       style: Theme.of(context).textTheme.bodyMedium),
                   const SizedBox(height: AyuSpacing.m),
                   _SearchField(
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(
                           builder: (_) => const SearchScreen(open: true)))),
                   const SizedBox(height: AyuSpacing.m),
-                  const SafetyNotice(
-                    title: 'AyuCare Safety Notice',
-                    body:
-                        '${DisclaimerConfig.homeNotice} Tap below for the full disclaimer.',
-                    level: NoticeLevel.info,
+                  _HubCard(
+                    icon: Icons.medical_information_outlined,
+                    title: 'Diseases & Treatment',
+                    subtitle:
+                        '${repo.conditions.length} conditions A–Z · educational reference',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const AzScreen(push: true))),
                   ),
-                  TextButton(
-                    onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (_) => const DisclaimerPage())),
-                    child: const Text('Read Full Disclaimer'),
+                  _HubCard(
+                    icon: Icons.spa_outlined,
+                    title: 'Skin Health',
+                    subtitle: '$skinCount skin conditions · 10 best reads',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const SkinReadsScreen())),
                   ),
-                  Text('A–Z Explorer',
-                      style: Theme.of(context).textTheme.titleMedium),
-                  const SizedBox(height: AyuSpacing.s),
-                  const AzGrid(),
-                  const SizedBox(height: AyuSpacing.m),
-                  Text('Explore by Health Topic',
-                      style: Theme.of(context).textTheme.titleMedium),
-                  const SizedBox(height: AyuSpacing.s),
-                  for (final t in _topics)
-                    _TopicCard(
-                        title: t.$1,
-                        icon: t.$2,
-                        count: repo.conditions
-                            .where((c) =>
-                                List<String>.from(t.$3).contains(c.name))
-                            .length),
+                  _HubCard(
+                    icon: Icons.fitness_center_outlined,
+                    title: 'Exercises',
+                    subtitle: 'Guided routines with counters & timers',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const ExerciseHubScreen())),
+                  ),
+                  _HubCard(
+                    icon: Icons.pregnant_woman_outlined,
+                    title: 'Gentle Beginnings',
+                    subtitle:
+                        'Pregnancy care tips that inform, never replace care',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const PregnancyHubScreen())),
+                  ),
+                  _HubCard(
+                    icon: Icons.self_improvement_outlined,
+                    title: 'Mental Health',
+                    subtitle: 'Everyday psychological tips + support paths',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const MentalHubScreen())),
+                  ),
+                  _HubCard(
+                    icon: Icons.eco_outlined,
+                    title: 'Everyday Herbs',
+                    subtitle: 'Kitchen herbs for daily wellness routines',
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                        builder: (_) => const EverydayHerbsScreen())),
+                  ),
                 ],
               ),
             ),
@@ -160,22 +137,34 @@ class _SearchField extends StatelessWidget {
       );
 }
 
-class _TopicCard extends StatelessWidget {
-  const _TopicCard(
-      {required this.title, required this.icon, required this.count});
-  final String title;
+class _HubCard extends StatelessWidget {
+  const _HubCard(
+      {required this.icon,
+      required this.title,
+      required this.subtitle,
+      required this.onTap});
   final IconData icon;
-  final int count;
+  final String title, subtitle;
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) => Card(
+        margin: const EdgeInsets.only(bottom: AyuSpacing.s),
         child: ListTile(
-          leading: Icon(icon, color: AyuColors.antiqueGold),
+          leading: Container(
+            padding: const EdgeInsets.all(AyuSpacing.s),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Theme.of(context).colorScheme.primary.withValues(alpha: 0.16),
+                AyuColors.antiqueGold.withValues(alpha: 0.16),
+              ]),
+              borderRadius: BorderRadius.circular(AyuRadius.s),
+            ),
+            child: Icon(icon, color: Theme.of(context).colorScheme.primary),
+          ),
           title: Text(title),
-          subtitle: Text(count == 0
-              ? 'Growing library — more topics soon'
-              : '$count condition${count == 1 ? '' : 's'}'),
+          subtitle: Text(subtitle),
           trailing: const Icon(Icons.chevron_right),
-          onTap: () {},
+          onTap: onTap,
         ),
       );
 }
