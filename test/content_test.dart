@@ -4,14 +4,31 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('bundle covers every letter A-Z exactly once', () async {
+  test('every letter A-Z has at least one condition', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
     final raw = jsonDecode(
       await rootBundle.loadString('assets/content/conditions.json'),
     ) as List;
-    final letters = raw.map((e) => (e as Map)['letter'] as String).toList()
-      ..sort();
-    expect(letters.join(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    final letters = raw.map((e) => (e as Map)['letter'] as String).toSet();
+    for (final l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')) {
+      expect(letters.contains(l), isTrue, reason: 'letter $l');
+    }
+    expect(raw.length, greaterThanOrEqualTo(100));
+  });
+
+  test('category tags and medical tests are valid', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    final raw = jsonDecode(
+      await rootBundle.loadString('assets/content/conditions.json'),
+    ) as List;
+    const tags = {'Treatable', 'Post-care', 'Preventative', 'Avoidable'};
+    for (final e in raw) {
+      final m = e as Map;
+      expect(tags.contains(m['category_tag']), isTrue,
+          reason: "${m['id']} tag");
+      expect((m['medical_tests'] as List).isNotEmpty, isTrue,
+          reason: "${m['id']} tests");
+    }
   });
 
   test('no prohibited diagnostic/cure language in bundle', () async {
@@ -39,24 +56,16 @@ void main() {
     }
   });
 
-  test('every condition ships a bundled image with credit', () async {
+  test('image workflow is honestly marked withdrawn', () async {
     TestWidgetsFlutterBinding.ensureInitialized();
     final raw = jsonDecode(
       await rootBundle.loadString('assets/content/conditions.json'),
     ) as List;
     for (final e in raw) {
       final m = e as Map;
-      expect((m['image'] as String).isNotEmpty, isTrue,
-          reason: "${m['id']} image");
-      expect((m['image_credit'] as String).isNotEmpty, isTrue,
-          reason: "${m['id']} credit");
+      expect((m['image_status'] as String).isNotEmpty, isTrue,
+          reason: "${m['id']} image_status");
     }
-  });
-
-  test('bundled image files exist on disk', () {
-    final dir = Directory('assets/content/images');
-    expect(dir.existsSync(), isTrue);
-    expect(dir.listSync().whereType<File>().length, greaterThanOrEqualTo(26));
   });
 
   test('products respect max-3-per-condition mapping', () async {

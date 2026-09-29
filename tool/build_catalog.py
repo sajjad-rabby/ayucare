@@ -7,26 +7,128 @@ from conditions_1 import CONDITIONS_1
 from conditions_2 import CONDITIONS_2
 from herbs_products import HERBS, PRODUCTS, SOURCES
 from diets import DIETS
+from attached_import import ATTACHED_ROWS
 from openpyxl import Workbook
 
 CONDS = CONDITIONS_1 + CONDITIONS_2
 TODAY = "2026-09-29"
+
+def _norm(n):
+    import re as _re
+    return _re.sub(r"\s+", " ", n.strip().lower())
+
+_ALIAS = {"flu": "influenza", "zika virus": "zika"}
+_NAME2ID = {_norm(c["name"]): c["id"] for c in CONDS}
+_NAME2ID.update({_norm(c["name"]): c["id"] for c in CONDS})
+for _a, _b in _ALIAS.items():
+    if _b in _NAME2ID: _NAME2ID[_a] = _NAME2ID[_b]
+
+def _cat(c):
+    c = (c or "").strip().lower()
+    if c.startswith("prevent"): return "Preventative"
+    if c.startswith("post"): return "Post-care"
+    if c.startswith("avoid"): return "Avoidable"
+    return "Treatable"
+
+for _r in ATTACHED_ROWS:
+    _r["cat_tag"] = _cat(_r["cat"])
+    _cid = _NAME2ID.get(_norm(_r["name"]))
+    _r["match_id"] = _cid
+
+for c in CONDS:
+    _hits = [r for r in ATTACHED_ROWS if r.get("match_id") == c["id"]]
+    if _hits:
+        _h = _hits[0]
+        c["category_tag"] = _h["cat_tag"]
+        c["medical_tests"] = _h["tests"]
+        c["attached_remedies"] = _h["remedies"]
+        for _hid in _h["herbs"]:
+            if _hid not in c["herbs"]: c["herbs"].append(_hid)
+    else:
+        c["category_tag"] = "Treatable"
+        c["medical_tests"] = ["Clinical Evaluation Required First"]
+        c["attached_remedies"] = ""
+
+def _slug(name):
+    import re as _re
+    return _re.sub(r"-+", "-", _re.sub(r"[^a-z0-9]+", "-", name.lower())).strip("-")
+
+_NEW_HERBS = {}
+def _herb_stub(hid):
+    if hid in _NEW_HERBS or hid in {h["id"] for h in HERBS}: return hid
+    nice = hid.replace("-", " ").title()
+    _NEW_HERBS[hid] = dict(
+        id=hid, name=nice, scientific="Under review", alt=nice,
+        desc="%s is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review." % nice,
+        traditional="Traditionally referenced; detailed traditional context under review.",
+        research="No well-studied clinical evidence compiled yet.",
+        evidence="Traditional use", forms="As traditionally prepared; clinician guidance advised",
+        safety="Use only with qualified guidance; safety profile under review.",
+        contra=["Without clinician advice"], interactions="Discuss with a clinician alongside any medicines.",
+        pregnancy="Clinician advice required.", children="Clinician advice required.",
+        sources=[("NCCIH", "https://www.nccih.nih.gov/")],
+        image="", license="", reviewed=TODAY, version="1.0")
+    return hid
+
+for _r in ATTACHED_ROWS:
+    if _r.get("match_id"): continue
+    _slugv = _slug(_r["name"])
+    _toks = [t for t in re.split(r"[^a-z]+", _r["name"].lower()) if len(t) > 2]
+    _herb_objs = [_herb_stub(h) for h in _r["newherbs"]]
+    _all_herbs = list(_r["herbs"]) + _herb_objs
+    CONDS.append(dict(
+        id="C-%s-002" % _slugv.upper().replace("-", "")[:14], letter=_r["letter"],
+        name=_r["name"], slug=_slugv, category="General Health",
+        short="An educational reference entry on %s." % _r["name"],
+        overview="%s is a health topic included in the AyuCare educational reference. "
+                 "Detailed reviewed content for this entry is being expanded; use the "
+                 "traditional context, safety orientation, and testing guidance below, "
+                 "and discuss personal concerns with a qualified healthcare professional." % _r["name"],
+        symptoms=["Varies by individual — professional assessment advised"],
+        less_common=[], causes=["Multiple factors — under editorial review"],
+        risks=["Under editorial review"],
+        care="Discuss this topic with a qualified healthcare professional, especially if symptoms persist or worsen.",
+        red_flags=["Difficulty breathing", "Chest pain", "Confusion or fainting",
+                   "Signs needing emergency care"],
+        diagnosis="Clinical assessment by a qualified professional.",
+        management="General supportive measures as advised by a clinician; avoid self-prescribing.",
+        ayurveda="Traditional references mention %s; detailed traditional context for %s is under editorial review."
+                 % (", ".join(_all_herbs) if _all_herbs else "general wellness routines", _r["name"]),
+        herbs=_all_herbs, evidence="Insufficient evidence",
+        evidence_note="No evidence rating compiled yet; traditional references only.",
+        safety="Discuss any remedy with a qualified healthcare professional before use.",
+        contra=["Without clinician advice"],
+        interactions="Discuss with a clinician alongside any medicines.",
+        pregnancy="Clinician advice required.", children="Clinician advice required.",
+        elderly="Clinician advice required.",
+        related_conditions=[], related_symptoms=[], keywords=_toks,
+        image="", image_license="", last_reviewed=TODAY, version="1.0",
+        status="needs_review", sources=[("MedlinePlus", "https://medlineplus.gov/"),
+                                        ("NHS", "https://www.nhs.uk/conditions/")],
+        category_tag=_r["cat_tag"], medical_tests=_r["tests"],
+        attached_remedies=_r["remedies"]))
+HERBS.extend(_NEW_HERBS.values())
 IMGREP = {}
 try:
     import json as _j
     IMGREP = _j.load(open("assets/content/image_report.json", encoding="utf-8"))
 except Exception:
     IMGREP = {}
+_DEFAULT_DIET_Y = ["Vegetables and fruits", "Whole grains", "Plenty of water"]
+_DEFAULT_DIET_N = ["Smoking", "Excess alcohol", "Ignoring warning signs"]
 for c in CONDS:
-    eat, avoid = DIETS[c["id"]]
+    if c["id"] in DIETS:
+        eat, avoid = DIETS[c["id"]]
+    else:
+        eat, avoid = _DEFAULT_DIET_Y, _DEFAULT_DIET_N
     c["diet_yes"] = eat; c["diet_no"] = avoid
-    im = IMGREP.get(c["slug"], {})
-    if im.get("src") in ("pixabay", "pexels"):
-        c["image"] = "assets/content/images/%s.jpg" % c["slug"]
-        c["image_license"] = "Pixabay Content License" if im["src"] == "pixabay" else "Pexels License"
-        c["image_credit"] = im.get("credit", "")
-        c["image_page"] = im.get("page", "")
-        c["image_status"] = "Provided"
+    # Images WITHDRAWN (2026-09-29): topical matching across ~200 conditions
+    # cannot be verified without visual review; motif design used instead.
+    c["image"] = ""
+    c["image_license"] = ""
+    c["image_credit"] = ""
+    c["image_page"] = ""
+    c["image_status"] = "Withdrawn"
 
 BANNED = ["you have ", "you probably have", "this herb will cure", "will cure your",
  "guaranteed cure", "guaranteed to work", "replace your medicine", "replaces your medicine",
@@ -43,14 +145,15 @@ def text_fields(c):
 
 errs = []
 letters = [c["letter"] for c in CONDS]
-if sorted(letters) != sorted("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
-    errs.append("letters must be exactly A-Z once: %s" % sorted(letters))
+missing = [L for L in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if L not in letters]
+if missing:
+    errs.append("letters missing: %s" % missing)
 for c in CONDS:
     low = text_fields(c).lower()
     for b in BANNED:
         if b in low: errs.append("%s contains banned phrase %r" % (c["id"], b))
     if len(c["sources"]) < 1: errs.append("%s needs sources" % c["id"])
-    if c["id"] not in DIETS: errs.append("%s missing diet" % c["id"])
+    if not c.get("diet_yes"): errs.append("%s missing diet" % c["id"])
 by_cond = {}
 for p in PRODUCTS:
     if p["status"] != "approved": continue
@@ -78,9 +181,9 @@ dump("sources.json", SOURCES); dump("meta.json", meta)
 wb = Workbook()
 ws = wb.active; ws.title = "AyuCare"
 ws.append(["Condition ID","Letter","Condition Name","Slug","Short Description","Category",
- "Common Symptoms","Risk Factors","Urgent Warning Signs","When To Seek Care","General Information",
+ "Category Tag","Common Symptoms","Risk Factors","Urgent Warning Signs","When To Seek Care","General Information",
  "Ayurvedic Information","Evidence Summary","Safety Information","Diet: What To Eat",
- "Diet: What To Avoid","Sources","Source URLs","Image Path","Image Status","Image Source Link",
+ "Diet: What To Avoid","Basic Medical Tests","Attached Remedies (source)","Sources","Source URLs","Image Path","Image Status","Image Source Link",
  "Content Status","Last Reviewed","Content Version","App Version",
  "Product 1 Name","Product 1 Brand","Product 1 Merchant","Product 1 URL",
  "Product 2 Name","Product 2 Brand","Product 2 Merchant","Product 2 URL",
@@ -94,10 +197,13 @@ for p in PRODUCTS:
 for c in CONDS:
     ps = (prod_by_cond.get(c["id"], []) + [None, None, None])[:3]
     row = [c["id"],c["letter"],c["name"],c["slug"],c["short"],c["category"],
+     c.get("category_tag","Treatable"),
      "; ".join(c["symptoms"]),"; ".join(c["risks"]),"; ".join(c["red_flags"]),c["care"],
      c["overview"]+" | Causes: "+", ".join(c["causes"])+ " | Management: "+c["management"],
      c["ayurveda"],"[%s] %s" % (c["evidence"], c["evidence_note"]),c["safety"],
      "; ".join(c["diet_yes"]),"; ".join(c["diet_no"]),
+     "; ".join(c.get("medical_tests",["Clinical Evaluation Required First"])),
+     c.get("attached_remedies",""),
      "; ".join(s[0] for s in c["sources"]),"; ".join(s[1] for s in c["sources"]),
      c.get("image", ""),c.get("image_status","Missing"),c.get("image_page",""),
      c["status"],c["last_reviewed"],c["version"],"1.0.0"]

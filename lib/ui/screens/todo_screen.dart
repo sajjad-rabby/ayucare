@@ -138,7 +138,6 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
                     },
                   ),
       );
-
 }
 
 class TodoDetailScreen extends StatefulWidget {

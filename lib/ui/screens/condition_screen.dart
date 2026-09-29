@@ -86,45 +86,18 @@ class _ConditionScreenState extends State<ConditionScreen> {
         padding: const EdgeInsets.all(AyuSpacing.m),
         children: [
           // Identity + about merged
-          if (c.image.isNotEmpty)
-            RepaintBoundary(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(AyuRadius.m),
-                child: Image.asset(c.image,
-                    height: 190,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                    cacheHeight: 380,
-                    gaplessPlayback: true,
-                    semanticLabel: 'Illustration for ${c.name}',
-                    errorBuilder: (ctx, e, s) => const SizedBox.shrink()),
-              ),
-            ),
-          if (c.imageCredit.isNotEmpty)
-            Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text('Image: ${c.imageCredit}',
-                  style: Theme.of(context).textTheme.bodySmall),
-            ),
-          const SizedBox(height: AyuSpacing.s),
           Card(
             child: Padding(
               padding: const EdgeInsets.all(AyuSpacing.m),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: AyuSpacing.s, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withValues(alpha: 0.12),
-                      borderRadius: BorderRadius.circular(AyuRadius.pill),
-                    ),
-                    child: Text('Selected Condition',
-                        style: Theme.of(context).textTheme.labelLarge),
+                  Row(
+                    children: [
+                      _TagChip(label: 'Selected Condition', primary: true),
+                      const SizedBox(width: AyuSpacing.s),
+                      _TagChip(label: c.categoryTag, primary: false),
+                    ],
                   ),
                   const SizedBox(height: AyuSpacing.s),
                   Text(c.name, style: Theme.of(context).textTheme.displaySmall),
@@ -283,6 +256,22 @@ class _ConditionScreenState extends State<ConditionScreen> {
                 level: NoticeLevel.info,
               ),
           ],
+          // Proactive testing guidance — always after products, never before safety.
+          SectionCard(
+            title: 'Basic medical tests',
+            icon: Icons.biotech_outlined,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                    'Before seeing a doctor, these commonly used basic tests can '
+                    'make your visit more productive. A clinician decides what you '
+                    'actually need — this list is orientation, not an order.'),
+                const SizedBox(height: AyuSpacing.s),
+                BulletList(items: c.medicalTests),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -300,5 +289,47 @@ class _ConditionScreenState extends State<ConditionScreen> {
         content: Text(ok
             ? 'Opening external link: $label'
             : 'External link unavailable right now.')));
+  }
+}
+
+/// Category tag chip. Colors distinguish the editorial category at a glance:
+/// Treatable (green), Post-care (gold), Preventative (teal), Avoidable (grey).
+class _TagChip extends StatelessWidget {
+  const _TagChip({required this.label, required this.primary});
+  final String label;
+  final bool primary;
+  @override
+  Widget build(BuildContext context) {
+    final Color bg, fg;
+    if (primary) {
+      bg = Theme.of(context).colorScheme.primary.withValues(alpha: 0.12);
+      fg = Theme.of(context).colorScheme.primary;
+    } else {
+      switch (label) {
+        case 'Post-care':
+          bg = AyuColors.antiqueGold.withValues(alpha: 0.20);
+          fg = AyuColors.antiqueGold;
+        case 'Preventative':
+          bg = AyuColors.tealSage.withValues(alpha: 0.20);
+          fg = AyuColors.tealSage;
+        case 'Avoidable':
+          bg = Colors.grey.withValues(alpha: 0.20);
+          fg = Colors.grey.shade700;
+        default:
+          bg = AyuColors.primaryGreen.withValues(alpha: 0.12);
+          fg = AyuColors.primaryGreen;
+      }
+    }
+    return Container(
+      padding:
+          const EdgeInsets.symmetric(horizontal: AyuSpacing.s, vertical: 4),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(AyuRadius.pill),
+      ),
+      child: Text(label,
+          style: Theme.of(context).textTheme.labelLarge?.copyWith(color: fg),
+          semanticsLabel: 'Category: $label'),
+    );
   }
 }

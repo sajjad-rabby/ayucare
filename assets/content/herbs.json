@@ -448,5 +448,1433 @@
   "license": "",
   "reviewed": "2026-09-29",
   "version": "1.0"
+ },
+ {
+  "id": "licorice",
+  "name": "Licorice",
+  "scientific": "Under review",
+  "alt": "Licorice",
+  "desc": "Licorice is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bhringraj",
+  "name": "Bhringraj",
+  "scientific": "Under review",
+  "alt": "Bhringraj",
+  "desc": "Bhringraj is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "brahmi",
+  "name": "Brahmi",
+  "scientific": "Under review",
+  "alt": "Brahmi",
+  "desc": "Brahmi is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "punarnava",
+  "name": "Punarnava",
+  "scientific": "Under review",
+  "alt": "Punarnava",
+  "desc": "Punarnava is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "arjuna",
+  "name": "Arjuna",
+  "scientific": "Under review",
+  "alt": "Arjuna",
+  "desc": "Arjuna is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "jatamansi",
+  "name": "Jatamansi",
+  "scientific": "Under review",
+  "alt": "Jatamansi",
+  "desc": "Jatamansi is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "guggul",
+  "name": "Guggul",
+  "scientific": "Under review",
+  "alt": "Guggul",
+  "desc": "Guggul is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "vasaka",
+  "name": "Vasaka",
+  "scientific": "Under review",
+  "alt": "Vasaka",
+  "desc": "Vasaka is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "tea-tree-oil",
+  "name": "Tea Tree Oil",
+  "scientific": "Under review",
+  "alt": "Tea Tree Oil",
+  "desc": "Tea Tree Oil is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "mahanarayan-oil",
+  "name": "Mahanarayan Oil",
+  "scientific": "Under review",
+  "alt": "Mahanarayan Oil",
+  "desc": "Mahanarayan Oil is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bala",
+  "name": "Bala",
+  "scientific": "Under review",
+  "alt": "Bala",
+  "desc": "Bala is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "clove",
+  "name": "Clove",
+  "scientific": "Under review",
+  "alt": "Clove",
+  "desc": "Clove is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "sarpagandha",
+  "name": "Sarpagandha",
+  "scientific": "Under review",
+  "alt": "Sarpagandha",
+  "desc": "Sarpagandha is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "nirgundi",
+  "name": "Nirgundi",
+  "scientific": "Under review",
+  "alt": "Nirgundi",
+  "desc": "Nirgundi is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "garcinia",
+  "name": "Garcinia",
+  "scientific": "Under review",
+  "alt": "Garcinia",
+  "desc": "Garcinia is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "shilajit",
+  "name": "Shilajit",
+  "scientific": "Under review",
+  "alt": "Shilajit",
+  "desc": "Shilajit is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "kalmegh",
+  "name": "Kalmegh",
+  "scientific": "Under review",
+  "alt": "Kalmegh",
+  "desc": "Kalmegh is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "kutki",
+  "name": "Kutki",
+  "scientific": "Under review",
+  "alt": "Kutki",
+  "desc": "Kutki is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "rose-water",
+  "name": "Rose Water",
+  "scientific": "Under review",
+  "alt": "Rose Water",
+  "desc": "Rose Water is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "kutaj",
+  "name": "Kutaj",
+  "scientific": "Under review",
+  "alt": "Kutaj",
+  "desc": "Kutaj is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bilva",
+  "name": "Bilva",
+  "scientific": "Under review",
+  "alt": "Bilva",
+  "desc": "Bilva is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "shankhpushpi",
+  "name": "Shankhpushpi",
+  "scientific": "Under review",
+  "alt": "Shankhpushpi",
+  "desc": "Shankhpushpi is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "karela",
+  "name": "Karela",
+  "scientific": "Under review",
+  "alt": "Karela",
+  "desc": "Karela is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "jamun",
+  "name": "Jamun",
+  "scientific": "Under review",
+  "alt": "Jamun",
+  "desc": "Jamun is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "fenugreek",
+  "name": "Fenugreek",
+  "scientific": "Under review",
+  "alt": "Fenugreek",
+  "desc": "Fenugreek is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "isabgol",
+  "name": "Isabgol",
+  "scientific": "Under review",
+  "alt": "Isabgol",
+  "desc": "Isabgol is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "ashoka",
+  "name": "Ashoka",
+  "scientific": "Under review",
+  "alt": "Ashoka",
+  "desc": "Ashoka is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "shatavari",
+  "name": "Shatavari",
+  "scientific": "Under review",
+  "alt": "Shatavari",
+  "desc": "Shatavari is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "pippali",
+  "name": "Pippali",
+  "scientific": "Under review",
+  "alt": "Pippali",
+  "desc": "Pippali is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "varuna",
+  "name": "Varuna",
+  "scientific": "Under review",
+  "alt": "Varuna",
+  "desc": "Varuna is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "vacha",
+  "name": "Vacha",
+  "scientific": "Under review",
+  "alt": "Vacha",
+  "desc": "Vacha is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "ashokarishta",
+  "name": "Ashokarishta",
+  "scientific": "Under review",
+  "alt": "Ashokarishta",
+  "desc": "Ashokarishta is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "fennel",
+  "name": "Fennel",
+  "scientific": "Under review",
+  "alt": "Fennel",
+  "desc": "Fennel is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "cumin",
+  "name": "Cumin",
+  "scientific": "Under review",
+  "alt": "Cumin",
+  "desc": "Cumin is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "cardamom",
+  "name": "Cardamom",
+  "scientific": "Under review",
+  "alt": "Cardamom",
+  "desc": "Cardamom is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "chandan",
+  "name": "Chandan",
+  "scientific": "Under review",
+  "alt": "Chandan",
+  "desc": "Chandan is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "haritaki",
+  "name": "Haritaki",
+  "scientific": "Under review",
+  "alt": "Haritaki",
+  "desc": "Haritaki is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "tagar",
+  "name": "Tagar",
+  "scientific": "Under review",
+  "alt": "Tagar",
+  "desc": "Tagar is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "lodhra",
+  "name": "Lodhra",
+  "scientific": "Under review",
+  "alt": "Lodhra",
+  "desc": "Lodhra is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "khadir",
+  "name": "Khadir",
+  "scientific": "Under review",
+  "alt": "Khadir",
+  "desc": "Khadir is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "cissus",
+  "name": "Cissus",
+  "scientific": "Under review",
+  "alt": "Cissus",
+  "desc": "Cissus is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "bilva-taila",
+  "name": "Bilva Taila",
+  "scientific": "Under review",
+  "alt": "Bilva Taila",
+  "desc": "Bilva Taila is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "garlic",
+  "name": "Garlic",
+  "scientific": "Under review",
+  "alt": "Garlic",
+  "desc": "Garlic is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "mucuna",
+  "name": "Mucuna",
+  "scientific": "Under review",
+  "alt": "Mucuna",
+  "desc": "Mucuna is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "suran",
+  "name": "Suran",
+  "scientific": "Under review",
+  "alt": "Suran",
+  "desc": "Suran is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "parijat",
+  "name": "Parijat",
+  "scientific": "Under review",
+  "alt": "Parijat",
+  "desc": "Parijat is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "chyawanprash",
+  "name": "Chyawanprash",
+  "scientific": "Under review",
+  "alt": "Chyawanprash",
+  "desc": "Chyawanprash is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "sphatika",
+  "name": "Sphatika",
+  "scientific": "Under review",
+  "alt": "Sphatika",
+  "desc": "Sphatika is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "gotu-kola",
+  "name": "Gotu Kola",
+  "scientific": "Under review",
+  "alt": "Gotu Kola",
+  "desc": "Gotu Kola is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "vidanga",
+  "name": "Vidanga",
+  "scientific": "Under review",
+  "alt": "Vidanga",
+  "desc": "Vidanga is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
+ },
+ {
+  "id": "manjistha",
+  "name": "Manjistha",
+  "scientific": "Under review",
+  "alt": "Manjistha",
+  "desc": "Manjistha is traditionally referenced in Ayurvedic practice; a full monograph is under editorial review.",
+  "traditional": "Traditionally referenced; detailed traditional context under review.",
+  "research": "No well-studied clinical evidence compiled yet.",
+  "evidence": "Traditional use",
+  "forms": "As traditionally prepared; clinician guidance advised",
+  "safety": "Use only with qualified guidance; safety profile under review.",
+  "contra": [
+   "Without clinician advice"
+  ],
+  "interactions": "Discuss with a clinician alongside any medicines.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "NCCIH",
+    "https://www.nccih.nih.gov/"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-29",
+  "version": "1.0"
  }
 ]
