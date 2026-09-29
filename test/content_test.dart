@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -36,6 +37,26 @@ void main() {
         expect(text.contains(banned), isFalse, reason: '$f contains "$banned"');
       }
     }
+  });
+
+  test('every condition ships a bundled image with credit', () async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    final raw = jsonDecode(
+      await rootBundle.loadString('assets/content/conditions.json'),
+    ) as List;
+    for (final e in raw) {
+      final m = e as Map;
+      expect((m['image'] as String).isNotEmpty, isTrue,
+          reason: "${m['id']} image");
+      expect((m['image_credit'] as String).isNotEmpty, isTrue,
+          reason: "${m['id']} credit");
+    }
+  });
+
+  test('bundled image files exist on disk', () {
+    final dir = Directory('assets/content/images');
+    expect(dir.existsSync(), isTrue);
+    expect(dir.listSync().whereType<File>().length, greaterThanOrEqualTo(26));
   });
 
   test('products respect max-3-per-condition mapping', () async {

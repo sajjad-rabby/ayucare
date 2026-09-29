@@ -64,8 +64,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
             icon: const Icon(Icons.share_outlined),
             tooltip: 'Share',
             onPressed: () => SharePlus.instance.share(ShareParams(
-                text:
-                    '${c.name} — ${c.short}\nLearn about it in AyuCare.',
+                text: '${c.name} — ${c.short}\nLearn about it in AyuCare.',
                 subject: c.name)),
           ),
           IconButton(
@@ -87,6 +86,23 @@ class _ConditionScreenState extends State<ConditionScreen> {
         padding: const EdgeInsets.all(AyuSpacing.m),
         children: [
           // Identity + about merged
+          if (c.image.isNotEmpty)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(AyuRadius.m),
+              child: Image.asset(c.image,
+                  height: 190,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                  semanticLabel: 'Illustration for ${c.name}',
+                  errorBuilder: (ctx, e, s) => const SizedBox.shrink()),
+            ),
+          if (c.imageCredit.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Text('Image: ${c.imageCredit}',
+                  style: Theme.of(context).textTheme.bodySmall),
+            ),
+          const SizedBox(height: AyuSpacing.s),
           Card(
             child: Padding(
               padding: const EdgeInsets.all(AyuSpacing.m),

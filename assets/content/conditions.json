@@ -70,8 +70,8 @@
    "blackheads",
    "oily skin"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/acne.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -97,7 +97,10 @@
    "Deep-fried snacks",
    "Skim-milk excess for sensitive skin",
    "Very greasy fast food"
-  ]
+  ],
+  "image_credit": "Kjerstin_Michaela via Pixabay",
+  "image_page": "https://pixabay.com/photos/acne-pores-skin-pimple-female-1606765/",
+  "image_status": "Provided"
  },
  {
   "id": "C-BRONCHITIS-001",
@@ -169,8 +172,8 @@
    "phlegm",
    "mucus cough"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/bronchitis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -194,7 +197,10 @@
    "Smoking and smoke exposure",
    "Very cold drinks during fits",
    "Dusty irritant foods"
-  ]
+  ],
+  "image_credit": "geralt via Pixabay",
+  "image_page": "https://pixabay.com/photos/woman-human-few-man-face-body-254133/",
+  "image_status": "Provided"
  },
  {
   "id": "C-CONSTIPATION-001",
@@ -267,8 +273,8 @@
    "bloating",
    "digestion"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/constipation.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -293,7 +299,10 @@
    "Refined flour excess",
    "Very low-fluid days",
    "Excess cheese or processed snacks"
-  ]
+  ],
+  "image_credit": "orensteiner via Pixabay",
+  "image_page": "https://pixabay.com/photos/sewage-b224-illuminated-780582/",
+  "image_status": "Provided"
  },
  {
   "id": "C-DENGUE-001",
@@ -365,8 +374,8 @@
    "breakbone fever",
    "dengue symptoms"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/dengue.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -390,7 +399,10 @@
    "Aspirin/NSAIDs without advice",
    "Alcohol",
    "Dehydrating sugary sodas"
-  ]
+  ],
+  "image_credit": "WikiImages via Pixabay",
+  "image_page": "https://pixabay.com/photos/mosquito-insect-mosquito-bite-49141/",
+  "image_status": "Provided"
  },
  {
   "id": "C-ECZEMA-001",
@@ -460,8 +472,8 @@
    "rash",
    "dry patches"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/eczema.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -485,7 +497,10 @@
    "Known personal trigger foods",
    "Excess alcohol",
    "Very spicy excess for sensitive skin"
-  ]
+  ],
+  "image_credit": "Filmbetrachter via Pixabay",
+  "image_page": "https://pixabay.com/photos/hands-dry-corona-towel-4941760/",
+  "image_status": "Provided"
  },
  {
   "id": "C-FEVER-001",
@@ -562,8 +577,8 @@
    "pyrexia",
    "jwara"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/fever.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -587,7 +602,10 @@
    "Heavy oily meals",
    "Caffeine excess",
    "Alcohol"
-  ]
+  ],
+  "image_credit": "stevepb via Pixabay",
+  "image_page": "https://pixabay.com/photos/thermometer-medications-tablets-1539191/",
+  "image_status": "Provided"
  },
  {
   "id": "C-GASTRITIS-001",
@@ -662,8 +680,8 @@
    "indigestion",
    "stomach burn"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/gastritis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -689,7 +707,10 @@
    "Citrus excess",
    "Caffeine and alcohol",
    "Late heavy meals"
-  ]
+  ],
+  "image_credit": "silviarita via Pixabay",
+  "image_page": "https://pixabay.com/photos/woman-belly-stomachache-heart-3186730/",
+  "image_status": "Provided"
  },
  {
   "id": "C-HEADACHE-001",
@@ -764,8 +785,8 @@
    "forehead pain",
    "tension headache"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/headache.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -789,7 +810,10 @@
    "Excess caffeine",
    "Alcohol",
    "Very strong cheese for sensitive people"
-  ]
+  ],
+  "image_credit": "StockSnap via Pixabay",
+  "image_page": "https://pixabay.com/photos/woman-sad-depression-skin-headache-2609115/",
+  "image_status": "Provided"
  },
  {
   "id": "C-INFLUENZA-001",
@@ -863,8 +887,8 @@
    "body ache",
    "flu symptoms"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/influenza.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -888,7 +912,10 @@
    "Alcohol",
    "Smoking",
    "Heavy greasy meals while feverish"
-  ]
+  ],
+  "image_credit": "Engin_Akyurt via Pixabay",
+  "image_page": "https://pixabay.com/photos/photographer-coronavirus-mask-retro-5355840/",
+  "image_status": "Provided"
  },
  {
   "id": "C-JAUNDICE-001",
@@ -964,8 +991,8 @@
    "bilirubin",
    "kamala"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/jaundice.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -989,7 +1016,10 @@
    "Alcohol strictly",
    "Oily and fried food",
    "Unsupervised herbal mixtures"
-  ]
+  ],
+  "image_credit": "arinaja via Pixabay",
+  "image_page": "https://pixabay.com/photos/chicken-liver-liver-with-vegetables-2786322/",
+  "image_status": "Provided"
  },
  {
   "id": "C-KIDNEY-STONES-001",
@@ -1062,8 +1092,8 @@
    "flank pain",
    "pathri"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/kidney-stones.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1087,7 +1117,10 @@
    "Very high oxalate excess without advice",
    "Dehydration",
    "Cola excess"
-  ]
+  ],
+  "image_credit": "IMGMIDI via Pixabay",
+  "image_page": "https://pixabay.com/photos/nephron-kidney-excretory-system-7013806/",
+  "image_status": "Provided"
  },
  {
   "id": "C-LARYNGITIS-001",
@@ -1159,8 +1192,8 @@
    "sore throat",
    "gala"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/laryngitis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1180,7 +1213,10 @@
    "Smoking",
    "Very cold drinks",
    "Shouting over soreness"
-  ]
+  ],
+  "image_credit": "PDPics via Pixabay",
+  "image_page": "https://pixabay.com/photos/lozenges-white-mint-shape-tablet-166975/",
+  "image_status": "Provided"
  },
  {
   "id": "C-MIGRAINE-001",
@@ -1251,8 +1287,8 @@
    "throbbing headache",
    "adhashishi"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/migraine.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1276,7 +1312,10 @@
    "Alcohol",
    "Excess caffeine",
    "Known personal triggers"
-  ]
+  ],
+  "image_credit": "Picsbix via Pixabay",
+  "image_page": "https://pixabay.com/photos/headache-stressed-person-9847052/",
+  "image_status": "Provided"
  },
  {
   "id": "C-NEUROPATHY-001",
@@ -1349,8 +1388,8 @@
    "tingling",
    "burning feet"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/neuropathy.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1373,7 +1412,10 @@
    "Alcohol",
    "Uncontrolled sugar excess",
    "Very low-nutrient diets"
-  ]
+  ],
+  "image_credit": "geralt via Pixabay",
+  "image_page": "https://pixabay.com/photos/brain-biology-anatomy-think-2676370/",
+  "image_status": "Provided"
  },
  {
   "id": "C-OSTEOARTHRITIS-001",
@@ -1445,8 +1487,8 @@
    "stiffness",
    "sandhivata"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/osteoarthritis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1470,7 +1512,10 @@
    "Excess weight-gain snacking",
    "Sugary drinks",
    "Alcohol excess"
-  ]
+  ],
+  "image_credit": "nattanan23 via Pixabay",
+  "image_page": "https://pixabay.com/photos/body-medicine-health-care-people-2703403/",
+  "image_status": "Provided"
  },
  {
   "id": "C-PSORIASIS-001",
@@ -1543,8 +1588,8 @@
    "plaque",
    "kitibha"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/psoriasis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1567,7 +1612,10 @@
    "Alcohol",
    "Smoking",
    "Known personal trigger foods"
-  ]
+  ],
+  "image_credit": "Foto-Rabe via Pixabay",
+  "image_page": "https://pixabay.com/photos/snakes-reptile-animals-scale-653639/",
+  "image_status": "Provided"
  },
  {
   "id": "C-QFEVER-001",
@@ -1637,8 +1685,8 @@
    "coxiella",
    "flu-like fever livestock"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/q-fever.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1660,7 +1708,10 @@
   "diet_no": [
    "Alcohol during recovery",
    "Raw unpasteurized dairy near livestock areas"
-  ]
+  ],
+  "image_credit": "khoinguyenfoto via Pixabay",
+  "image_page": "https://pixabay.com/photos/sheep-meadow-white-farm-5352474/",
+  "image_status": "Provided"
  },
  {
   "id": "C-RINGWORM-001",
@@ -1732,8 +1783,8 @@
    "ring rash",
    "dadru"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/ringworm.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1755,7 +1806,10 @@
   "diet_no": [
    "Sharing personal items (hygiene, not diet)",
    "Sugary excess"
-  ]
+  ],
+  "image_credit": "Kreuz_und_Quer via Pixabay",
+  "image_page": "https://pixabay.com/photos/disinfection-disinfectant-hygiene-4947375/",
+  "image_status": "Provided"
  },
  {
   "id": "C-SINUSITIS-001",
@@ -1832,8 +1886,8 @@
    "congestion",
    "pratishyaya"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/sinusitis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1856,7 +1910,10 @@
    "Smoking",
    "Dusty irritants",
    "Excess dairy if personally congesting"
-  ]
+  ],
+  "image_credit": "Pexels via Pixabay",
+  "image_page": "https://pixabay.com/photos/architecture-buildings-cars-city-1837176/",
+  "image_status": "Provided"
  },
  {
   "id": "C-TONSILLITIS-001",
@@ -1929,8 +1986,8 @@
    "throat pain",
    "gala shoth"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/tonsillitis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -1953,7 +2010,10 @@
   "diet_no": [
    "Smoking",
    "Very spicy or crunchy foods during soreness"
-  ]
+  ],
+  "image_credit": "stevepb via Pixabay",
+  "image_page": "https://pixabay.com/photos/flu-influenza-cold-virus-sick-1006045/",
+  "image_status": "Provided"
  },
  {
   "id": "C-ULCERATIVE-COLITIS-001",
@@ -2023,8 +2083,8 @@
    "ibd",
    "bowel inflammation"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/ulcerative-colitis.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2047,7 +2107,10 @@
    "Alcohol",
    "Known personal trigger foods",
    "Self-imposed extreme diets"
-  ]
+  ],
+  "image_credit": "jonathanvalencia5 via Pixabay",
+  "image_page": "https://pixabay.com/photos/chicken-intestine-grilled-barbecue-2187505/",
+  "image_status": "Provided"
  },
  {
   "id": "C-VITILIGO-001",
@@ -2109,8 +2172,8 @@
    "shwitra",
    "leucoderma"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/vitiligo.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2132,7 +2195,10 @@
   "diet_no": [
    "No proven diet cure exists — beware restrictive claims",
    "Unsupervised mega-doses"
-  ]
+  ],
+  "image_credit": "lylsharain via Pixabay",
+  "image_page": "https://pixabay.com/photos/hands-playing-child-play-toy-5040603/",
+  "image_status": "Provided"
  },
  {
   "id": "C-WHOOPING-COUGH-001",
@@ -2202,8 +2268,8 @@
    "whoop",
    "kali khansi"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/whooping-cough.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2225,7 +2291,10 @@
   "diet_no": [
    "Smoking exposure",
    "Dusty irritants"
-  ]
+  ],
+  "image_credit": "sasint via Pixabay",
+  "image_page": "https://pixabay.com/photos/antibiotic-asia-infant-bacteria-1782433/",
+  "image_status": "Provided"
  },
  {
   "id": "C-XERODERMA-001",
@@ -2295,8 +2364,8 @@
    "xerosis",
    "rukshata"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/xeroderma.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2319,7 +2388,10 @@
    "Excess caffeine",
    "Alcohol",
    "Very hot spicy excess for sensitive skin"
-  ]
+  ],
+  "image_credit": "designundfotoart via Pixabay",
+  "image_page": "https://pixabay.com/photos/woman-dry-skin-face-cracks-4402587/",
+  "image_status": "Provided"
  },
  {
   "id": "C-YELLOW-FEVER-001",
@@ -2389,8 +2461,8 @@
    "travel vaccine fever",
    "peela bukhar"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/yellow-fever.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2412,7 +2484,10 @@
   "diet_no": [
    "Alcohol",
    "Aspirin/NSAIDs without advice"
-  ]
+  ],
+  "image_credit": "triyugowicaksono via Pixabay",
+  "image_page": "https://pixabay.com/photos/fly-mosquito-net-white-346451/",
+  "image_status": "Provided"
  },
  {
   "id": "C-ZIKA-001",
@@ -2481,8 +2556,8 @@
    "mosquito rash",
    "travel rash fever"
   ],
-  "image": "",
-  "image_license": "",
+  "image": "assets/content/images/zika.jpg",
+  "image_license": "Pixabay Content License",
   "last_reviewed": "2026-09-29",
   "version": "1.0",
   "status": "published",
@@ -2504,6 +2579,9 @@
   "diet_no": [
    "Alcohol",
    "Dehydrating routines"
-  ]
+  ],
+  "image_credit": "jhusemannde via Pixabay",
+  "image_page": "https://pixabay.com/photos/fly-screen-grid-mosquito-repellent-365699/",
+  "image_status": "Provided"
  }
 ]

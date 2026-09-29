@@ -33,6 +33,8 @@ class Condition {
         version = j['version'] as String,
         dietYes = _strList(j['diet_yes']),
         dietNo = _strList(j['diet_no']),
+        image = (j['image'] as String?) ?? '',
+        imageCredit = (j['image_credit'] as String?) ?? '',
         sources = (j['sources'] as List)
             .map((s) => SourceRef((s as List)[0] as String, (s)[1] as String))
             .toList();
@@ -49,6 +51,7 @@ class Condition {
   final List<String> relatedConditions, relatedSymptoms, keywords;
   final String reviewed, version;
   final List<String> dietYes, dietNo;
+  final String image, imageCredit;
   final List<SourceRef> sources;
 
   static List<String> _strList(Object? v) =>

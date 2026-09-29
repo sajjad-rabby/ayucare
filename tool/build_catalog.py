@@ -11,9 +11,22 @@ from openpyxl import Workbook
 
 CONDS = CONDITIONS_1 + CONDITIONS_2
 TODAY = "2026-09-29"
+IMGREP = {}
+try:
+    import json as _j
+    IMGREP = _j.load(open("assets/content/image_report.json", encoding="utf-8"))
+except Exception:
+    IMGREP = {}
 for c in CONDS:
     eat, avoid = DIETS[c["id"]]
     c["diet_yes"] = eat; c["diet_no"] = avoid
+    im = IMGREP.get(c["slug"], {})
+    if im.get("src") in ("pixabay", "pexels"):
+        c["image"] = "assets/content/images/%s.jpg" % c["slug"]
+        c["image_license"] = "Pixabay Content License" if im["src"] == "pixabay" else "Pexels License"
+        c["image_credit"] = im.get("credit", "")
+        c["image_page"] = im.get("page", "")
+        c["image_status"] = "Provided"
 
 BANNED = ["you have ", "you probably have", "this herb will cure", "will cure your",
  "guaranteed cure", "guaranteed to work", "replace your medicine", "replaces your medicine",
@@ -86,7 +99,7 @@ for c in CONDS:
      c["ayurveda"],"[%s] %s" % (c["evidence"], c["evidence_note"]),c["safety"],
      "; ".join(c["diet_yes"]),"; ".join(c["diet_no"]),
      "; ".join(s[0] for s in c["sources"]),"; ".join(s[1] for s in c["sources"]),
-     "assets/content/images/%s.jpg" % c["slug"],"Missing","",
+     c.get("image", ""),c.get("image_status","Missing"),c.get("image_page",""),
      c["status"],c["last_reviewed"],c["version"],"1.0.0"]
     for p in ps:
         if p is None: row += ["","","",""]

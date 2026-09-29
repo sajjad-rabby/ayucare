@@ -17,8 +17,7 @@ void main() {
     await tester.pump(const Duration(seconds: 1));
     await tester.pump(const Duration(seconds: 1));
     expect(find.text('AyuCare'), findsWidgets);
-    expect(
-        find.text('Search conditions, symptoms or herbs…'), findsOneWidget);
+    expect(find.text('Search conditions, symptoms or herbs…'), findsOneWidget);
     expect(find.text('Diseases & Treatment'), findsOneWidget);
     expect(find.text('Everyday Herbs'), findsOneWidget);
     expect(find.text('AyuCare Safety Notice'), findsNothing);
