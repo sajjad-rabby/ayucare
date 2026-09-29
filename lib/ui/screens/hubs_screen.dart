@@ -117,7 +117,7 @@ const _exercises = [
         'Downward dog, hold 5 breaths',
         'Step forward, rise up'
       ],
-      'counter', Icons.directions_walk_outlined),
+      'counter', Icons.wb_sunny_outlined),
   _Exercise(
       'Anulom Vilom Breathing',
       'Alternate-nostril breathing for calm focus.',
@@ -127,7 +127,7 @@ const _exercises = [
         'Close left, exhale right 4 counts',
         'Repeat 5 rounds'
       ],
-      'timer', Icons.wb_sunny_outlined),
+      'timer', Icons.air_outlined),
   _Exercise(
       'Bhujangasana (Cobra)',
       'Gentle backbend for spine mobility.',
@@ -137,7 +137,7 @@ const _exercises = [
         'Hold 15–30 seconds, breathe',
         'Lower down, repeat 3 times'
       ],
-      'counter', Icons.air_outlined),
+      'counter', Icons.self_improvement_outlined),
   _Exercise(
       'Tadasana (Mountain Pose)',
       'Posture and balance foundation.',
@@ -146,7 +146,7 @@ const _exercises = [
         'Engage thighs, lift chest',
         'Arms alongside, breathe 1 minute'
       ],
-      'timer', Icons.self_improvement_outlined),
+      'timer', Icons.accessibility_new_outlined),
   _Exercise(
       'Chair Squats',
       'Leg strength without equipment.',
@@ -156,7 +156,7 @@ const _exercises = [
         'Stand up, repeat 8–12 times',
         'Rest, 2 rounds'
       ],
-      'counter', Icons.accessibility_new_outlined),
+      'counter', Icons.fitness_center_outlined),
   _Exercise(
       'Neck & Shoulder Rolls',
       'Release desk tension.',
@@ -165,7 +165,7 @@ const _exercises = [
         'Ear to shoulder hold 15 seconds each side',
         'Shoulder shrugs 10 times'
       ],
-      'guide', Icons.fitness_center_outlined),
+      'guide', Icons.sports_gymnastics_outlined),
   _Exercise(
       'Evening Stretch',
       '10-minute wind-down routine.',
@@ -175,7 +175,7 @@ const _exercises = [
         'Seated twist each side',
         'Legs-up-wall 3 minutes'
       ],
-      'timer', Icons.sports_gymnastics_outlined),
+      'timer', Icons.bedtime_outlined),
 ];
 
 class ExerciseHubScreen extends StatelessWidget {
