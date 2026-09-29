@@ -1,5 +1,6 @@
 import 'package:ayucare/data/content_repository.dart';
 import 'package:ayucare/data/models.dart';
+import 'package:ayucare/data/todo_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 Map<String, Object?> _cond(
@@ -73,5 +74,21 @@ void main() {
   test('plurals and stop-words tolerated', () {
     final hits = repo().search('Do I have headaches?');
     expect(hits.map((c) => c.name), contains('Fever'));
+  });
+
+  test('todo list round-trips with reminder', () {
+    final t = TodoList(
+      id: 42,
+      title: 'Vitamins',
+      description: 'Morning routine',
+      items: [TodoItem(text: 'Drink water', done: true)],
+      reminderIso: DateTime(2026, 10, 1, 8, 30).toIso8601String(),
+      reminderOn: true,
+    );
+    final back = TodoList.fromJson(
+        Map<String, Object?>.from((t.toJson()).map((k, v) => MapEntry(k, v))));
+    expect(back.title, 'Vitamins');
+    expect(back.items.single.done, isTrue);
+    expect(back.reminderAt?.hour, 8);
   });
 }

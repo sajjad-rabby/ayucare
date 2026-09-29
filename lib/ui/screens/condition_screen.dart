@@ -97,8 +97,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
                     cacheHeight: 380,
                     gaplessPlayback: true,
                     semanticLabel: 'Illustration for ${c.name}',
-                    errorBuilder: (ctx, e, s) =>
-                        const SizedBox.shrink()),
+                    errorBuilder: (ctx, e, s) => const SizedBox.shrink()),
               ),
             ),
           if (c.imageCredit.isNotEmpty)

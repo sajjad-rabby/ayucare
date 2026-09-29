@@ -36,8 +36,8 @@ class _RemindersScreenState extends State<RemindersScreen> {
   Future<void> _addDialog() async {
     if (_items!.length >= ReminderService.maxReminders) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Maximum reminders reached.')));
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Maximum reminders reached.')));
       return;
     }
     final titleCtrl = TextEditingController(text: 'AyuCare · Reminder');
@@ -56,22 +56,18 @@ class _RemindersScreenState extends State<RemindersScreen> {
               children: [
                 TextField(
                     controller: titleCtrl,
-                    decoration:
-                        const InputDecoration(labelText: 'Title')),
+                    decoration: const InputDecoration(labelText: 'Title')),
                 TextField(
                     controller: bodyCtrl,
-                    decoration:
-                        const InputDecoration(labelText: 'Message')),
+                    decoration: const InputDecoration(labelText: 'Message')),
                 const SizedBox(height: 8),
                 DropdownButtonFormField<String>(
                   initialValue: kind,
                   items: const [
-                    DropdownMenuItem(
-                        value: 'water', child: Text('Water')),
+                    DropdownMenuItem(value: 'water', child: Text('Water')),
                     DropdownMenuItem(
                         value: 'exercise', child: Text('Exercise')),
-                    DropdownMenuItem(
-                        value: 'custom', child: Text('General')),
+                    DropdownMenuItem(value: 'custom', child: Text('General')),
                   ],
                   onChanged: (v) => setD(() => kind = v ?? 'custom'),
                   decoration: const InputDecoration(labelText: 'Icon'),
@@ -141,66 +137,69 @@ class _RemindersScreenState extends State<RemindersScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Daily Reminders')),
-    floatingActionButton: FloatingActionButton(
-      onPressed: _items == null ? null : _addDialog,
-      tooltip: 'Add reminder',
-      child: const Icon(Icons.add),
-    ),
-    body: _items == null
-        ? const Center(
-            child: CircularProgressIndicator(semanticsLabel: 'Loading'))
-        : ListView(
-            padding: const EdgeInsets.all(AyuSpacing.m),
-            children: [
-              const SafetyNotice(
-                title: 'Gentle nudges, on your device',
-                body: 'Reminders repeat daily in your timezone. '
-                    'No account, no server, no location tracking.',
-                level: NoticeLevel.info,
-              ),
-              const SizedBox(height: AyuSpacing.s),
-              for (final r in _items!)
-                Card(
-                  child: ListTile(
-                    leading: Icon(r.icon,
-                        color:
-                            Theme.of(context).colorScheme.primary),
-                    title: Text(r.title),
-                    subtitle: Text('${r.time12} · daily'),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Switch(
-                          value: r.enabled,
-                          onChanged: (v) async {
-                            final i = _items!.indexOf(r);
-                            _items![i] = ReminderItem(
-                                id: r.id, title: r.title, body: r.body,
-                                hour: r.hour, minute: r.minute,
-                                enabled: v, kind: r.kind);
-                            await _persist();
-                          },
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.delete_outline),
-                          tooltip: 'Delete reminder',
-                          onPressed: () async {
-                            _items!.remove(r);
-                            await _persist();
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              Padding(
+        appBar: AppBar(title: const Text('Daily Reminders')),
+        floatingActionButton: FloatingActionButton(
+          onPressed: _items == null ? null : _addDialog,
+          tooltip: 'Add reminder',
+          child: const Icon(Icons.add),
+        ),
+        body: _items == null
+            ? const Center(
+                child: CircularProgressIndicator(semanticsLabel: 'Loading'))
+            : ListView(
                 padding: const EdgeInsets.all(AyuSpacing.m),
-                child: Text(
-                    'Times in ${ReminderService.zoneName}. Tap + to add more.',
-                    style: Theme.of(context).textTheme.bodySmall),
+                children: [
+                  const SafetyNotice(
+                    title: 'Gentle nudges, on your device',
+                    body: 'Reminders repeat daily in your timezone. '
+                        'No account, no server, no location tracking.',
+                    level: NoticeLevel.info,
+                  ),
+                  const SizedBox(height: AyuSpacing.s),
+                  for (final r in _items!)
+                    Card(
+                      child: ListTile(
+                        leading: Icon(r.icon,
+                            color: Theme.of(context).colorScheme.primary),
+                        title: Text(r.title),
+                        subtitle: Text('${r.time12} · daily'),
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Switch(
+                              value: r.enabled,
+                              onChanged: (v) async {
+                                final i = _items!.indexOf(r);
+                                _items![i] = ReminderItem(
+                                    id: r.id,
+                                    title: r.title,
+                                    body: r.body,
+                                    hour: r.hour,
+                                    minute: r.minute,
+                                    enabled: v,
+                                    kind: r.kind);
+                                await _persist();
+                              },
+                            ),
+                            IconButton(
+                              icon: const Icon(Icons.delete_outline),
+                              tooltip: 'Delete reminder',
+                              onPressed: () async {
+                                _items!.remove(r);
+                                await _persist();
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  Padding(
+                    padding: const EdgeInsets.all(AyuSpacing.m),
+                    child: Text(
+                        'Times in ${ReminderService.zoneName}. Tap + to add more.',
+                        style: Theme.of(context).textTheme.bodySmall),
+                  ),
+                ],
               ),
-            ],
-          ),
-  );
+      );
 }

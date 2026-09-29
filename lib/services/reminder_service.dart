@@ -33,25 +33,30 @@ class ReminderItem {
   }
 
   IconData get icon => switch (kind) {
-    'water' => Icons.water_drop_outlined,
-    'exercise' => Icons.fitness_center_outlined,
-    _ => Icons.notifications_outlined,
-  };
+        'water' => Icons.water_drop_outlined,
+        'exercise' => Icons.fitness_center_outlined,
+        _ => Icons.notifications_outlined,
+      };
 
   Map<String, Object?> toJson() => {
-    'id': id, 'title': title, 'body': body, 'hour': hour,
-    'minute': minute, 'enabled': enabled, 'kind': kind,
-  };
+        'id': id,
+        'title': title,
+        'body': body,
+        'hour': hour,
+        'minute': minute,
+        'enabled': enabled,
+        'kind': kind,
+      };
 
   factory ReminderItem.fromJson(Map<String, Object?> j) => ReminderItem(
-    id: j['id'] as String,
-    title: j['title'] as String,
-    body: j['body'] as String,
-    hour: (j['hour'] as num).toInt(),
-    minute: (j['minute'] as num).toInt(),
-    enabled: j['enabled'] as bool,
-    kind: j['kind'] as String,
-  );
+        id: j['id'] as String,
+        title: j['title'] as String,
+        body: j['body'] as String,
+        hour: (j['hour'] as num).toInt(),
+        minute: (j['minute'] as num).toInt(),
+        enabled: j['enabled'] as bool,
+        kind: j['kind'] as String,
+      );
 }
 
 class ReminderService {
@@ -61,19 +66,27 @@ class ReminderService {
   static const maxReminders = 8;
 
   static List<ReminderItem> _defaults() => [
-    ReminderItem(
-        id: 'water-evening', title: 'AyuCare · Water check-in',
-        body: 'Did you drink enough water today? A glass now keeps you steady.',
-        hour: 20, minute: 0, enabled: true, kind: 'water'),
-    ReminderItem(
-        id: 'exercise-morning', title: 'AyuCare · Move a little',
-        body: 'Time for today\u2019s movement — even a short walk counts.',
-        hour: 7, minute: 0, enabled: true, kind: 'exercise'),
-  ];
+        ReminderItem(
+            id: 'water-evening',
+            title: 'AyuCare · Water check-in',
+            body:
+                'Did you drink enough water today? A glass now keeps you steady.',
+            hour: 20,
+            minute: 0,
+            enabled: true,
+            kind: 'water'),
+        ReminderItem(
+            id: 'exercise-morning',
+            title: 'AyuCare · Move a little',
+            body: 'Time for today\u2019s movement — even a short walk counts.',
+            hour: 7,
+            minute: 0,
+            enabled: true,
+            kind: 'exercise'),
+      ];
 
   static Future<List<ReminderItem>> load() async {
-    final raw =
-        (await SharedPreferences.getInstance()).getStringList(_kList);
+    final raw = (await SharedPreferences.getInstance()).getStringList(_kList);
     if (raw == null) {
       final d = _defaults();
       await save(d);
@@ -153,4 +166,33 @@ class ReminderService {
       return 'device timezone';
     }
   }
+
+  /// One-shot reminder for todo lists (exact local date-time, daily range
+  /// 1000..1999 to avoid clashing with daily slots 200+).
+  static Future<void> scheduleOneShot({
+    required int id,
+    required String title,
+    required String body,
+    required DateTime at,
+  }) async {
+    final when = tz.TZDateTime.from(at, tz.local);
+    if (when.isBefore(tz.TZDateTime.now(tz.local))) return;
+    const details = NotificationDetails(
+      android: AndroidNotificationDetails(
+        'ayucare_todo',
+        'Todo reminders',
+        importance: Importance.defaultImportance,
+      ),
+    );
+    await plugin.zonedSchedule(
+      id: id,
+      title: title,
+      body: body,
+      scheduledDate: when,
+      notificationDetails: details,
+      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+    );
+  }
+
+  static Future<void> cancelOneShot(int id) => plugin.cancel(id: id);
 }

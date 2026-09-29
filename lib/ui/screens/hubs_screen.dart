@@ -104,7 +104,8 @@ const _exercises = [
         'Walk briskly 20 minutes',
         'Cool down 3 minutes, gentle stretch'
       ],
-      'guide', Icons.directions_walk_outlined),
+      'guide',
+      Icons.directions_walk_outlined),
   _Exercise(
       'Surya Namaskar Flow',
       'Traditional sun-salutation sequence for flexibility.',
@@ -117,7 +118,8 @@ const _exercises = [
         'Downward dog, hold 5 breaths',
         'Step forward, rise up'
       ],
-      'counter', Icons.wb_sunny_outlined),
+      'counter',
+      Icons.wb_sunny_outlined),
   _Exercise(
       'Anulom Vilom Breathing',
       'Alternate-nostril breathing for calm focus.',
@@ -127,7 +129,8 @@ const _exercises = [
         'Close left, exhale right 4 counts',
         'Repeat 5 rounds'
       ],
-      'timer', Icons.air_outlined),
+      'timer',
+      Icons.air_outlined),
   _Exercise(
       'Bhujangasana (Cobra)',
       'Gentle backbend for spine mobility.',
@@ -137,7 +140,8 @@ const _exercises = [
         'Hold 15–30 seconds, breathe',
         'Lower down, repeat 3 times'
       ],
-      'counter', Icons.self_improvement_outlined),
+      'counter',
+      Icons.self_improvement_outlined),
   _Exercise(
       'Tadasana (Mountain Pose)',
       'Posture and balance foundation.',
@@ -146,7 +150,8 @@ const _exercises = [
         'Engage thighs, lift chest',
         'Arms alongside, breathe 1 minute'
       ],
-      'timer', Icons.accessibility_new_outlined),
+      'timer',
+      Icons.accessibility_new_outlined),
   _Exercise(
       'Chair Squats',
       'Leg strength without equipment.',
@@ -156,7 +161,8 @@ const _exercises = [
         'Stand up, repeat 8–12 times',
         'Rest, 2 rounds'
       ],
-      'counter', Icons.fitness_center_outlined),
+      'counter',
+      Icons.fitness_center_outlined),
   _Exercise(
       'Neck & Shoulder Rolls',
       'Release desk tension.',
@@ -165,7 +171,8 @@ const _exercises = [
         'Ear to shoulder hold 15 seconds each side',
         'Shoulder shrugs 10 times'
       ],
-      'guide', Icons.sports_gymnastics_outlined),
+      'guide',
+      Icons.sports_gymnastics_outlined),
   _Exercise(
       'Evening Stretch',
       '10-minute wind-down routine.',
@@ -175,7 +182,8 @@ const _exercises = [
         'Seated twist each side',
         'Legs-up-wall 3 minutes'
       ],
-      'timer', Icons.bedtime_outlined),
+      'timer',
+      Icons.bedtime_outlined),
 ];
 
 class ExerciseHubScreen extends StatelessWidget {
@@ -236,25 +244,25 @@ class _ExerciseCardState extends State<_ExerciseCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(AyuSpacing.s),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    AyuColors.primaryGreen.withValues(alpha: 0.16),
-                    AyuColors.antiqueGold.withValues(alpha: 0.16),
-                  ]),
-                  borderRadius: BorderRadius.circular(AyuRadius.s),
-                ),
-                child: Icon(widget.ex.icon,
-                    color: Theme.of(context).colorScheme.primary,
-                    semanticLabel: widget.ex.name),
-              ),
-              const SizedBox(width: AyuSpacing.s),
-              Expanded(
-                  child: Text(widget.ex.name,
-                      style: Theme.of(context).textTheme.titleMedium)),
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(AyuSpacing.s),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                        AyuColors.primaryGreen.withValues(alpha: 0.16),
+                        AyuColors.antiqueGold.withValues(alpha: 0.16),
+                      ]),
+                      borderRadius: BorderRadius.circular(AyuRadius.s),
+                    ),
+                    child: Icon(widget.ex.icon,
+                        color: Theme.of(context).colorScheme.primary,
+                        semanticLabel: widget.ex.name),
+                  ),
+                  const SizedBox(width: AyuSpacing.s),
+                  Expanded(
+                      child: Text(widget.ex.name,
+                          style: Theme.of(context).textTheme.titleMedium)),
                   IconButton(
                     icon: Icon(_open ? Icons.expand_less : Icons.expand_more),
                     tooltip: _open ? 'Collapse' : 'Expand steps',

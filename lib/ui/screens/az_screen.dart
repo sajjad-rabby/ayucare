@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../main.dart';
 import '../../theme/ayu_theme.dart';
@@ -30,7 +29,6 @@ class WheelExplorer extends StatefulWidget {
 class _WheelExplorerState extends State<WheelExplorer> {
   late final FixedExtentScrollController _ctrl;
   int _sel = 0;
-  Timer? _settle;
 
   @override
   void initState() {
@@ -40,7 +38,6 @@ class _WheelExplorerState extends State<WheelExplorer> {
 
   @override
   void dispose() {
-    _settle?.cancel();
     _ctrl.dispose();
     super.dispose();
   }
@@ -72,11 +69,9 @@ class _WheelExplorerState extends State<WheelExplorer> {
                 magnification: 1.25,
                 physics: const FixedExtentScrollPhysics(),
                 onSelectedItemChanged: (i) {
-                  setState(() => _sel = i);
-                  _settle?.cancel();
-                  _settle = Timer(const Duration(milliseconds: 1200), () {
-                    if (mounted) _open(letters[_sel]);
-                  });
+                  // Highlight follows the wheel; navigation ONLY on tap/Open.
+                  // (Auto-push on settle caused double pages — removed.)
+                  if (mounted) setState(() => _sel = i);
                 },
                 childDelegate: ListWheelChildBuilderDelegate(
                   childCount: letters.length,
