@@ -1,0 +1,13 @@
+# PLAY_STORE_COMPLIANCE_CHECKLIST (review fresh policy before submission)
+- [ ] Health Content & Services policy re-read (current version, not this snapshot)
+- [ ] Health Apps declaration completed
+- [ ] Privacy policy URL (in-app page exists; host public URL before submit)
+- [ ] In-app disclaimer present (global + contextual) — DONE in code
+- [ ] Store description contains non-medical-device + consult-professional wording
+- [ ] Title "AyuCare: Health & Ayurveda" = 26 chars (≤30) — verify at submit
+- [ ] Short description ≤80 chars: "Explore health conditions, symptoms, herbs and Ayurvedic wellness information." (79 chars — recount at submit)
+- [ ] No cure/doctor-approved/guaranteed claims in listing or screenshots
+- [ ] Data Safety form (no data collected in v1.0.0)
+- [ ] Content rating questionnaire (health reference)
+- [ ] Trademark/name/domain check by Sajjad (not assumed clear)
+- [ ] Personal-account closed test (14 testers × 14 days) if applicable
