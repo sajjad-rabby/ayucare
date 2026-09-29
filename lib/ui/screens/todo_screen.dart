@@ -13,6 +13,18 @@ class TodoListsScreen extends StatefulWidget {
 
 class _TodoListsScreenState extends State<TodoListsScreen> {
   List<TodoList>? _lists;
+  // Dialog controllers live as State fields: disposing them the moment the
+  // dialog pops races the exit transition (framework rebuilds the dialog
+  // subtree -> use-after-dispose red screen). State.dispose owns disposal.
+  final _titleCtrl = TextEditingController();
+  final _descCtrl = TextEditingController();
+
+  @override
+  void dispose() {
+    _titleCtrl.dispose();
+    _descCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -26,8 +38,8 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
   }
 
   Future<void> _createDialog() async {
-    final titleCtrl = TextEditingController();
-    final descCtrl = TextEditingController();
+    _titleCtrl.clear();
+    _descCtrl.clear();
     var ok = false;
     await showDialog(
       context: context,
@@ -38,12 +50,13 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               TextField(
-                  controller: titleCtrl,
+                  controller: _titleCtrl,
                   decoration: const InputDecoration(labelText: 'Title'),
                   onChanged: (_) => setD(() {})),
               TextField(
-                  controller: descCtrl,
-                  decoration: const InputDecoration(labelText: 'Description')),
+                  controller: _descCtrl,
+                  decoration:
+                      const InputDecoration(labelText: 'Description')),
             ],
           ),
           actions: [
@@ -51,7 +64,7 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
                 onPressed: () => Navigator.of(context).pop(),
                 child: const Text('Cancel')),
             FilledButton(
-              onPressed: titleCtrl.text.trim().isEmpty
+              onPressed: _titleCtrl.text.trim().isEmpty
                   ? null
                   : () {
                       ok = true;
@@ -63,22 +76,16 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
         ),
       ),
     );
-    if (!ok || !mounted) {
-      titleCtrl.dispose();
-      descCtrl.dispose();
-      return;
-    }
+    if (!ok || !mounted) return;
     final lists = await TodoRepository.load();
     lists.add(TodoList(
       id: TodoRepository.newId(),
-      title: titleCtrl.text.trim(),
-      description: descCtrl.text.trim(),
+      title: _titleCtrl.text.trim(),
+      description: _descCtrl.text.trim(),
       items: [],
       reminderOn: false,
     ));
     await TodoRepository.save(lists);
-    titleCtrl.dispose();
-    descCtrl.dispose();
     await _refresh();
   }
 

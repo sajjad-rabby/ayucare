@@ -35,6 +35,7 @@ class SafetyNotice extends StatelessWidget {
         break;
     }
     return Card(
+      margin: const EdgeInsets.only(bottom: AyuSpacing.s),
       color: Theme.of(context).brightness == Brightness.dark
           ? null
           : accent.withValues(alpha: 0.07),
@@ -84,7 +85,8 @@ class SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Card(
-        child: Padding(
+    margin: const EdgeInsets.only(bottom: AyuSpacing.s),
+    child: Padding(
           padding: const EdgeInsets.all(AyuSpacing.m),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,6 +111,18 @@ class SectionCard extends StatelessWidget {
           ),
         ),
       );
+}
+
+/// Constrains reading width on tablets/landscape; full-bleed on phones.
+class ResponsiveBody extends StatelessWidget {
+  const ResponsiveBody({super.key, required this.child});
+  final Widget child;
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(
+    builder: (context, c) => c.maxWidth <= 760
+        ? child
+        : Center(child: SizedBox(width: 720, child: child)),
+  );
 }
 
 class BulletList extends StatelessWidget {

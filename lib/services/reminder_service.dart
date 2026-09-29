@@ -118,9 +118,15 @@ class ReminderService {
   }
 
   static Future<bool> requestPermission() async {
-    final android = plugin.resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>();
-    return await android?.requestNotificationsPermission() ?? false;
+    // try/catch: widget tests register no platform implementation, and
+    // some OEM ROMs throw here. Permission denial must never crash UI.
+    try {
+      final android = plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
+      return await android?.requestNotificationsPermission() ?? false;
+    } catch (_) {
+      return false;
+    }
   }
 
   static tz.TZDateTime _next(int hour, int minute) {

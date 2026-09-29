@@ -13,6 +13,17 @@ class RemindersScreen extends StatefulWidget {
 
 class _RemindersScreenState extends State<RemindersScreen> {
   List<ReminderItem>? _items;
+  // Same dialog-lifecycle rule as todo lists: controllers are State-owned,
+  // disposed only in dispose() — never right after Navigator.pop.
+  final _titleCtrl = TextEditingController();
+  final _bodyCtrl = TextEditingController();
+
+  @override
+  void dispose() {
+    _titleCtrl.dispose();
+    _bodyCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -36,12 +47,12 @@ class _RemindersScreenState extends State<RemindersScreen> {
   Future<void> _addDialog() async {
     if (_items!.length >= ReminderService.maxReminders) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Maximum reminders reached.')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+          content: Text('Maximum reminders reached.')));
       return;
     }
-    final titleCtrl = TextEditingController(text: 'AyuCare · Reminder');
-    final bodyCtrl = TextEditingController(text: 'A gentle health nudge.');
+    _titleCtrl.text = 'AyuCare · Reminder';
+    _bodyCtrl.text = 'A gentle health nudge.';
     TimeOfDay when = const TimeOfDay(hour: 20, minute: 0);
     var kind = 'custom';
     var picked = false;
@@ -55,10 +66,10 @@ class _RemindersScreenState extends State<RemindersScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 TextField(
-                    controller: titleCtrl,
+                    controller: _titleCtrl,
                     decoration: const InputDecoration(labelText: 'Title')),
                 TextField(
-                    controller: bodyCtrl,
+                    controller: _bodyCtrl,
                     decoration: const InputDecoration(labelText: 'Message')),
                 const SizedBox(height: 8),
                 DropdownButtonFormField<String>(
@@ -106,10 +117,10 @@ class _RemindersScreenState extends State<RemindersScreen> {
                   ? () {
                       _items!.add(ReminderItem(
                         id: 'custom-${DateTime.now().microsecondsSinceEpoch}',
-                        title: titleCtrl.text.trim().isEmpty
+                        title: _titleCtrl.text.trim().isEmpty
                             ? 'AyuCare · Reminder'
-                            : titleCtrl.text.trim(),
-                        body: bodyCtrl.text.trim(),
+                            : _titleCtrl.text.trim(),
+                        body: _bodyCtrl.text.trim(),
                         hour: when.hour,
                         minute: when.minute,
                         enabled: true,
@@ -124,8 +135,6 @@ class _RemindersScreenState extends State<RemindersScreen> {
         ),
       ),
     );
-    titleCtrl.dispose();
-    bodyCtrl.dispose();
     await _persist();
   }
 

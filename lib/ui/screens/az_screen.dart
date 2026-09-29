@@ -29,6 +29,7 @@ class WheelExplorer extends StatefulWidget {
 class _WheelExplorerState extends State<WheelExplorer> {
   late final FixedExtentScrollController _ctrl;
   int _sel = 0;
+  bool _navigating = false; // guards double-push from tap + button races
 
   @override
   void initState() {
@@ -43,8 +44,14 @@ class _WheelExplorerState extends State<WheelExplorer> {
   }
 
   void _open(String letter) {
+    if (_navigating) return;
+    _navigating = true;
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (_) => LetterScreen(letter: letter)));
+        .push(
+            MaterialPageRoute(builder: (_) => LetterScreen(letter: letter)))
+        .then((_) {
+      _navigating = false;
+    });
   }
 
   @override

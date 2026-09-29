@@ -82,9 +82,10 @@ class _ConditionScreenState extends State<ConditionScreen> {
           ),
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(AyuSpacing.m),
-        children: [
+      body: ResponsiveBody(
+        child: ListView(
+          padding: const EdgeInsets.all(AyuSpacing.m),
+          children: [
           // Identity + about merged
           Card(
             child: Padding(
@@ -92,10 +93,11 @@ class _ConditionScreenState extends State<ConditionScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  Wrap(
+                    spacing: AyuSpacing.s,
+                    runSpacing: AyuSpacing.s,
                     children: [
                       _TagChip(label: 'Selected Condition', primary: true),
-                      const SizedBox(width: AyuSpacing.s),
                       _TagChip(label: c.categoryTag, primary: false),
                     ],
                   ),
@@ -273,6 +275,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
             ),
           ),
         ],
+        ),
       ),
     );
   }
