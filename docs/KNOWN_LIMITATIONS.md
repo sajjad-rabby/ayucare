@@ -1,6 +1,8 @@
 # KNOWN_LIMITATIONS (v1.0.0)
-1. Condition illustrations: Missing (no image-generation provider configured;
-   MUST inform and use motif design — DONE; statuses in catalog).
+1. Condition illustrations: PROVIDED via Pixabay Content License (26 distinct
+   editorial illustrations, photographer credit in-app + catalog). I could not
+   visually inspect each image (text-only review) — spot-check
+   assets/content/images before store submission. Pexels key held as fallback.
 2. No on-device run yet (no phone connected); emulator untested for this app.
 3. iOS/web/desktop shells exist from scaffold but only Android is built/tested.
 4. Products: Q Fever, Ulcerative Colitis, Whooping Cough, Kidney Stones,
