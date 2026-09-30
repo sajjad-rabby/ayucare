@@ -117,7 +117,7 @@ for _t in _NEW:
         merchant=merch, country="USA", currency="USD", url=url, herb=herb,
         conds=[], evidence="Traditional use", verified="2026-09-29",
         status="approved", version="1.0",
-        notes="Global storefront (iHerb search). Availability may vary by region."))
+        notes="Global storefront (iHerb search; page-fetch verified live; ships to 180+ countries — not Bangladesh). Check availability in your country."))
 _ptags = {}
 for _p in PRODUCTS:
     _ptags[_p["pid"]] = set()
