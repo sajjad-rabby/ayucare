@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../main.dart';
 import '../../theme/ayu_theme.dart';
+import '../widgets/ayu_icons.dart';
 import 'az_screen.dart';
 import 'hubs_screen.dart';
 import 'search_screen.dart';
@@ -79,6 +80,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   _HubCard(
                     icon: Icons.self_improvement_outlined,
+                    glyph: const AyuGlyph.lotus(),
                     title: 'Mental Health',
                     subtitle: 'Everyday psychological tips + support paths',
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -86,6 +88,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   _HubCard(
                     icon: Icons.eco_outlined,
+                    glyph: const AyuGlyph.leaf(),
                     title: 'Everyday Herbs',
                     subtitle: 'Kitchen herbs for daily wellness routines',
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
@@ -142,10 +145,12 @@ class _HubCard extends StatelessWidget {
       {required this.icon,
       required this.title,
       required this.subtitle,
-      required this.onTap});
+      required this.onTap,
+      this.glyph});
   final IconData icon;
   final String title, subtitle;
   final VoidCallback onTap;
+  final Widget? glyph;
   @override
   Widget build(BuildContext context) => Card(
         margin: const EdgeInsets.only(bottom: AyuSpacing.s),
@@ -159,7 +164,8 @@ class _HubCard extends StatelessWidget {
               ]),
               borderRadius: BorderRadius.circular(AyuRadius.s),
             ),
-            child: Icon(icon, color: Theme.of(context).colorScheme.primary),
+            child: glyph ??
+            Icon(icon, color: Theme.of(context).colorScheme.primary),
           ),
           title: Text(title),
           subtitle: Text(subtitle),

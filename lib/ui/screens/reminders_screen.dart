@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../services/reminder_service.dart';
 import '../../theme/ayu_theme.dart';
+import '../widgets/ayu_icons.dart';
 import '../widgets/ayu_widgets.dart';
 
 /// Reminder list: toggle, delete, and add new ones at any 12-hour time.
@@ -168,8 +169,12 @@ class _RemindersScreenState extends State<RemindersScreen> {
                   for (final r in _items!)
                     Card(
                       child: ListTile(
-                        leading: Icon(r.icon,
-                            color: Theme.of(context).colorScheme.primary),
+                        leading: r.kind == 'water'
+                            ? const AyuGlyph.drop()
+                            : Icon(r.icon,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primary),
                         title: Text(r.title),
                         subtitle: Text('${r.time12} · daily'),
                         trailing: Row(
