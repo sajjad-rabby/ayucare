@@ -93,7 +93,6 @@ class SkinArticleScreen extends StatelessWidget {
       );
 }
 
-
 // ---------- Exercises (interactive) ----------
 class _Exercise {
   const _Exercise(this.name, this.desc, this.steps, this.kind, this.icon);

@@ -85,8 +85,8 @@ class SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Card(
-    margin: const EdgeInsets.only(bottom: AyuSpacing.s),
-    child: Padding(
+        margin: const EdgeInsets.only(bottom: AyuSpacing.s),
+        child: Padding(
           padding: const EdgeInsets.all(AyuSpacing.m),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,10 +119,10 @@ class ResponsiveBody extends StatelessWidget {
   final Widget child;
   @override
   Widget build(BuildContext context) => LayoutBuilder(
-    builder: (context, c) => c.maxWidth <= 760
-        ? child
-        : Center(child: SizedBox(width: 720, child: child)),
-  );
+        builder: (context, c) => c.maxWidth <= 760
+            ? child
+            : Center(child: SizedBox(width: 720, child: child)),
+      );
 }
 
 class BulletList extends StatelessWidget {

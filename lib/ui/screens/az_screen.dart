@@ -47,8 +47,7 @@ class _WheelExplorerState extends State<WheelExplorer> {
     if (_navigating) return;
     _navigating = true;
     Navigator.of(context)
-        .push(
-            MaterialPageRoute(builder: (_) => LetterScreen(letter: letter)))
+        .push(MaterialPageRoute(builder: (_) => LetterScreen(letter: letter)))
         .then((_) {
       _navigating = false;
     });

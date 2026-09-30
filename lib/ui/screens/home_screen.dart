@@ -58,8 +58,7 @@ class HomeScreen extends StatelessWidget {
                   _HubCard(
                     icon: Icons.spa_outlined,
                     title: 'Skin Health',
-                    subtitle:
-                        '$skinCount skin conditions · 10 in-app guides',
+                    subtitle: '$skinCount skin conditions · 10 in-app guides',
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(
                         builder: (_) => const SkinReadsScreen())),
                   ),

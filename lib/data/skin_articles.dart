@@ -20,9 +20,11 @@ class SkinArticle {
 
 const skinArticles = [
   SkinArticle(
-    id: 'acne-routine', title: 'A Practical Acne Routine That Works',
+    id: 'acne-routine',
+    title: 'A Practical Acne Routine That Works',
     minutes: 5,
-    intro: 'A calm, consistent routine beats harsh products. Here is how to build one.',
+    intro:
+        'A calm, consistent routine beats harsh products. Here is how to build one.',
     sections: [
       SkinSection('Cleanse gently, twice daily',
           'Use lukewarm water and a mild, fragrance-free cleanser. Hot water and harsh scrubs inflame spots and delay healing. Pat dry — never rub.'),
@@ -37,9 +39,11 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'eczema-calm', title: 'Calming Eczema Flares Step by Step',
+    id: 'eczema-calm',
+    title: 'Calming Eczema Flares Step by Step',
     minutes: 5,
-    intro: 'Eczema flares feel chaotic. A fixed sequence brings them under control.',
+    intro:
+        'Eczema flares feel chaotic. A fixed sequence brings them under control.',
     sections: [
       SkinSection('The soak-and-seal method',
           'Bathe 5–10 minutes in lukewarm water, then apply moisturizer within 3 minutes of toweling off. This locks water into dry skin better than any expensive cream alone.'),
@@ -54,7 +58,8 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'psoriasis-basics', title: 'Living Well with Psoriasis',
+    id: 'psoriasis-basics',
+    title: 'Living Well with Psoriasis',
     minutes: 6,
     intro: 'Psoriasis is manageable. Understanding it is the first treatment.',
     sections: [
@@ -71,9 +76,11 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'sunscreen-mastery', title: 'Sunscreen: The Complete Practical Guide',
+    id: 'sunscreen-mastery',
+    title: 'Sunscreen: The Complete Practical Guide',
     minutes: 5,
-    intro: 'The single highest-impact skincare habit. Most people apply too little.',
+    intro:
+        'The single highest-impact skincare habit. Most people apply too little.',
     sections: [
       SkinSection('How much is enough',
           'Two finger-lengths of product for face and neck. A pea-sized dab — the most common amount — gives a fraction of the labeled SPF.'),
@@ -88,7 +95,8 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'dry-skin-fix', title: 'Fixing Chronically Dry Skin',
+    id: 'dry-skin-fix',
+    title: 'Fixing Chronically Dry Skin',
     minutes: 4,
     intro: 'Dry skin is usually a routine problem, not a product shortage.',
     sections: [
@@ -103,7 +111,8 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'oily-skin-balance', title: 'Balancing Oily Skin Without Stripping',
+    id: 'oily-skin-balance',
+    title: 'Balancing Oily Skin Without Stripping',
     minutes: 4,
     intro: 'Oily skin needs balance, not punishment. Stripping backfires.',
     sections: [
@@ -118,7 +127,8 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'fungal-prevention', title: 'Preventing Fungal Skin Infections',
+    id: 'fungal-prevention',
+    title: 'Preventing Fungal Skin Infections',
     minutes: 4,
     intro: 'Warmth plus moisture grows fungus. Your habits are the treatment.',
     sections: [
@@ -133,9 +143,11 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'sensitive-skin', title: 'A Survival Guide for Sensitive Skin',
+    id: 'sensitive-skin',
+    title: 'A Survival Guide for Sensitive Skin',
     minutes: 4,
-    intro: 'Sensitive skin reacts to everything. The fix is subtraction, not addition.',
+    intro:
+        'Sensitive skin reacts to everything. The fix is subtraction, not addition.',
     sections: [
       SkinSection('The 3-product reset',
           'Strip back to cleanser + moisturizer + sunscreen for two weeks. Most "sensitivity" is a damaged barrier from too many actives.'),
@@ -148,9 +160,11 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'wound-scab-care', title: 'Cuts, Scrapes and Scabs: Heal Cleanly',
+    id: 'wound-scab-care',
+    title: 'Cuts, Scrapes and Scabs: Heal Cleanly',
     minutes: 4,
-    intro: 'Proper wound care is the difference between invisible healing and a scar.',
+    intro:
+        'Proper wound care is the difference between invisible healing and a scar.',
     sections: [
       SkinSection('Clean, don\u2019t sterilize aggressively',
           'Rinse under clean running water, mild soap around (not inside) the wound. Hydrogen peroxide and alcohol damage healing tissue — skip them.'),
@@ -163,9 +177,11 @@ const skinArticles = [
     ],
   ),
   SkinArticle(
-    id: 'aging-gracefully', title: 'Skin Aging: What Actually Works',
+    id: 'aging-gracefully',
+    title: 'Skin Aging: What Actually Works',
     minutes: 5,
-    intro: 'Ninety percent of visible aging is sun damage. Everything else is details.',
+    intro:
+        'Ninety percent of visible aging is sun damage. Everything else is details.',
     sections: [
       SkinSection('The proven trio',
           'Daily sunscreen, retinoids at night (start low, twice weekly), and moisturizer. These three have decades of evidence; little else does.'),

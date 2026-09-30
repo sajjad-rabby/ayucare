@@ -4,6 +4,8 @@ sys.path.insert(0, "tool/content")
 from conditions_1 import CONDITIONS_1
 from conditions_2 import CONDITIONS_2
 from herbs_products import PRODUCTS, SOURCES
+from new_products import NEW_PRODUCTS
+PRODUCTS = PRODUCTS + [dict(pid=t[0], url=t[6]) for t in NEW_PRODUCTS]
 
 def check(url):
     try:

@@ -55,8 +55,7 @@ class _TodoListsScreenState extends State<TodoListsScreen> {
                   onChanged: (_) => setD(() {})),
               TextField(
                   controller: _descCtrl,
-                  decoration:
-                      const InputDecoration(labelText: 'Description')),
+                  decoration: const InputDecoration(labelText: 'Description')),
             ],
           ),
           actions: [

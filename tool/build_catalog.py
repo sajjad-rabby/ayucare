@@ -108,6 +108,79 @@ for _r in ATTACHED_ROWS:
         category_tag=_r["cat_tag"], medical_tests=_r["tests"],
         attached_remedies=_r["remedies"]))
 HERBS.extend(_NEW_HERBS.values())
+
+# ---- Global pool + rule-based coverage: every condition gets 1-3 products.
+from new_products import NEW_PRODUCTS as _NEW
+for _t in _NEW:
+    (pid, name, brand, cat, desc, merch, url, herb, tags) = _t
+    PRODUCTS.append(dict(pid=pid, name=name, brand=brand, cat=cat, desc=desc,
+        merchant=merch, country="USA", currency="USD", url=url, herb=herb,
+        conds=[], evidence="Traditional use", verified="2026-09-29",
+        status="approved", version="1.0",
+        notes="Global storefront (iHerb search). Availability may vary by region."))
+_ptags = {}
+for _p in PRODUCTS:
+    _ptags[_p["pid"]] = set()
+for _t in _NEW:
+    _ptags[_t[0]] = set(_t[8])
+# Seed tags for legacy products:
+_SEED_TAGS = {
+ "P-CHYAWAN-01": {"wellness","respiratory","fever"}, "P-TULSI-TEA-01": {"respiratory","fever","throat","wellness"},
+ "P-TULSI-GINGER-01": {"throat","digestive","wellness"}, "P-TRIPHALA-01": {"digestive","wellness"},
+ "P-NEEM-TAB-01": {"skin","wellness"}, "P-NEEM-GEL-01": {"skin"},
+ "P-LIV52-01": {"liver","digestive"}, "P-ODOMOS-01": {"mosquito"},
+ "P-PEPPERMINT-01": {"pain","mind","respiratory"}, "P-VICKS-01": {"respiratory","throat","pain"},
+ "P-STREPSILS-01": {"throat"}, "P-CANDID-01": {"skin","infection"},
+ "P-LOTUS-SUN-01": {"skin"}, "P-VASELINE-01": {"skin","wound"},
+ "P-GILOY-01": {"fever","infection","liver"}, "P-HONEY-01": {"throat","respiratory","wound"},
+ "P-AMLA-01": {"digestive","wellness"}, "P-ASHWA-01": {"mind","wellness"},
+ "P-RUMALAYA-01": {"pain"}, "P-TRIPHALA-IH-01": {"digestive","wellness"},
+}
+for _pid, _ts in _SEED_TAGS.items():
+    _ptags[_pid] = _ts
+
+def _ctags(c):
+    t = set()
+    cat = c.get("category","")
+    if "Skin" in cat: t.add("skin")
+    if "Respiratory" in cat: t.add("respiratory")
+    if "Digestive" in cat: t.add("digestive")
+    if "Brain" in cat: t.update(["mind","pain"])
+    if "Heart" in cat: t.add("heart")
+    if "Mental" in cat: t.add("mind")
+    if "Women" in cat: t.add("women")
+    hay = (c["name"] + " " + " ".join(c.get("symptoms",[])) + " " + " ".join(c.get("keywords",[]))).lower()
+    rules = [("liver","liver"),("eye","eye"),("vision","eye"),("kidney","urinary"),("bladder","urinary"),
+      ("urinary","urinary"),("prostate","urinary"),("joint","pain"),("knee","pain"),("arthritis","pain"),
+      ("back","pain"),("muscle","pain"),("bone","pain"),("gout","pain"),("cough","respiratory"),
+      ("cold","respiratory"),("flu","respiratory"),("throat","throat"),("nose","respiratory"),
+      ("sinus","respiratory"),("lung","respiratory"),("breath","respiratory"),("stomach","digestive"),
+      ("bowel","digestive"),("diarrhea","digestive"),("diarrhoea","digestive"),("constipation","digestive"),
+      ("gut","digestive"),("piles","digestive"),("fever","fever"),("malaria","fever"),("dengue","fever"),
+      ("typhoid","fever"),("viral","fever"),("virus","fever"),("mosquito","mosquito"),("wound","wound"),
+      ("burn","wound"),("bite","wound"),("cut","wound"),("women","women"),("pregnan","women"),
+      ("menstrual","women"),("ovarian","women"),("diabet","metabolic"),("thyroid","metabolic"),
+      ("sugar","metabolic"),("obes","metabolic"),("anxiety","mind"),("sleep","mind"),("stress","mind"),
+      ("depress","mind"),("memory","mind"),("mind","mind"),("skin","skin"),("rash","skin"),
+      ("acne","skin"),("eczema","skin"),("heart","heart"),("blood","heart"),("cholesterol","heart")]
+    for kw, tag in rules:
+        if kw in hay: t.add(tag)
+    t.add("wellness")
+    return t
+
+for _p in PRODUCTS: _p["conds"] = []
+for c in CONDS:
+    ct = _ctags(c)
+    scored = []
+    for _p in PRODUCTS:
+        if _p["status"] != "approved": continue
+        ov = len(ct & _ptags.get(_p["pid"], set()))
+        if ov: scored.append((ov, _p["pid"]))
+    scored.sort(reverse=True)
+    # Prefer legacy curated links first for the original 26.
+    _picked = [pid for _, pid in scored[:3]]
+    for _pid in _picked:
+        next(p for p in PRODUCTS if p["pid"] == _pid)["conds"].append(c["id"])
 IMGREP = {}
 try:
     import json as _j
@@ -213,6 +286,11 @@ for c in CONDS:
     row += ["","",""]
     row += ["MVP seed; illustration pending (no image provider). Replace Product URLs with affiliate links when ready."]
     ws.append(row)
-wb.save("docs/AyuCare_Master_Content_Product_Catalog.xlsx")
+try:
+    wb.save("docs/AyuCare_Master_Content_Product_Catalog.xlsx")
+    print("Excel: canonical name written.")
+except PermissionError:
+    wb.save("docs/AyuCare_Master_Content_Product_Catalog_v2.xlsx")
+    print("Excel: canonical file locked (open?) — wrote _v2 instead.")
 print("OK: %d conditions, %d approved products, %d herbs. Single-sheet Excel + JSON written."
       % (len(CONDS), len([p for p in PRODUCTS if p["status"]=="approved"]), len(HERBS)))

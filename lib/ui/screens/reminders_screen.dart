@@ -47,8 +47,8 @@ class _RemindersScreenState extends State<RemindersScreen> {
   Future<void> _addDialog() async {
     if (_items!.length >= ReminderService.maxReminders) {
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Maximum reminders reached.')));
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Maximum reminders reached.')));
       return;
     }
     _titleCtrl.text = 'AyuCare · Reminder';
