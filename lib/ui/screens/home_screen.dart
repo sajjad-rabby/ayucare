@@ -165,7 +165,7 @@ class _HubCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(AyuRadius.s),
             ),
             child: glyph ??
-            Icon(icon, color: Theme.of(context).colorScheme.primary),
+                Icon(icon, color: Theme.of(context).colorScheme.primary),
           ),
           title: Text(title),
           subtitle: Text(subtitle),

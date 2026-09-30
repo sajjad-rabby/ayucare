@@ -109,6 +109,19 @@ for _r in ATTACHED_ROWS:
         attached_remedies=_r["remedies"]))
 HERBS.extend(_NEW_HERBS.values())
 
+# Inositol enrichment: nutrient record + products + per-condition overrides.
+from inositol import INOSITOL_HERB, INOSITOL_PRODUCTS, CONDITION_OVERRIDES
+HERBS.append(INOSITOL_HERB)
+PRODUCTS.extend(INOSITOL_PRODUCTS)
+for _cid, _ov in CONDITION_OVERRIDES.items():
+    for _c in CONDS:
+        if _c["id"] != _cid: continue
+        _c["evidence"] = _ov["evidence"]
+        _c["evidence_note"] = _c.get("evidence_note", "") + _ov["evidence_note_suffix"]
+        for _h in _ov["herbs_add"]:
+            if _h not in _c["herbs"]: _c["herbs"].append(_h)
+        _c["sources"] = list(_c.get("sources", [])) + _ov["sources_add"]
+
 # ---- Global pool + rule-based coverage: every condition gets 1-3 products.
 from new_products import NEW_PRODUCTS as _NEW
 for _t in _NEW:
@@ -135,6 +148,8 @@ _SEED_TAGS = {
  "P-GILOY-01": {"fever","infection","liver"}, "P-HONEY-01": {"throat","respiratory","wound"},
  "P-AMLA-01": {"digestive","wellness"}, "P-ASHWA-01": {"mind","wellness"},
  "P-RUMALAYA-01": {"pain"}, "P-TRIPHALA-IH-01": {"digestive","wellness"},
+ "P-INOSITOL-01": {"metabolic","women","wellness"},
+ "P-INOSITOL-02": {"metabolic","women","wellness"},
 }
 for _pid, _ts in _SEED_TAGS.items():
     _ptags[_pid] = _ts
@@ -181,6 +196,23 @@ for c in CONDS:
     _picked = [pid for _, pid in scored[:3]]
     for _pid in _picked:
         next(p for p in PRODUCTS if p["pid"] == _pid)["conds"].append(c["id"])
+# Guarantee explicitly requested links (inositol trio) within the 3-cap.
+for _cid in ("C-PCOS-002", "C-OVARIANCYSTS-002", "C-DIABETES-002"):
+    for _pid in ("P-INOSITOL-01", "P-INOSITOL-02"):
+        _p = next(p for p in PRODUCTS if p["pid"] == _pid)
+        if _cid not in _p["conds"]:
+            _p["conds"].append(_cid)
+    # Trim any condition overflow back to 3 (keep inositol pair).
+    _byc = {}
+    for _p in PRODUCTS:
+        for _cc in list(_p["conds"]):
+            _byc.setdefault(_cc, []).append(_p["pid"])
+    for _cc, _pids in _byc.items():
+        if len(_pids) > 3:
+            _drop = [x for x in _pids if x not in ("P-INOSITOL-01", "P-INOSITOL-02")][:len(_pids) - 3]
+            for _p in PRODUCTS:
+                if _p["pid"] in _drop and _cc in _p["conds"]:
+                    _p["conds"].remove(_cc)
 IMGREP = {}
 try:
     import json as _j

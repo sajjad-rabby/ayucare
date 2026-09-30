@@ -5857,10 +5857,11 @@
   "herbs": [
    "karela",
    "jamun",
-   "fenugreek"
+   "fenugreek",
+   "inositol"
   ],
-  "evidence": "Insufficient evidence",
-  "evidence_note": "No evidence rating compiled yet; traditional references only.",
+  "evidence": "Some evidence",
+  "evidence_note": "No evidence rating compiled yet; traditional references only. Glucose control belongs to the treating clinician; never adjust diabetes medicines based on app content. Inositol research: of nine stereoisomers, myo-inositol (MYO) and D-chiro-inositol (DCI) are studied for PCOS. Healthy plasma holds MYO:DCI near 40:1 while PCOS ovaries can invert toward 0.2:1; trials of MYO alone or MYO+DCI at 40:1 report improved endocrine and insulin-resistance markers, while DCI alone has insufficient evidence. Insulin-mediation is also studied in type 2 diabetes. Product forms here are myo-inositol; any use belongs under clinician guidance, especially with diabetes medicines or in pregnancy.",
   "safety": "Discuss any remedy with a qualified healthcare professional before use.",
   "contra": [
    "Without clinician advice"
@@ -5887,6 +5888,10 @@
    [
     "NHS",
     "https://www.nhs.uk/conditions/"
+   ],
+   [
+    "PubMed",
+    "https://pubmed.ncbi.nlm.nih.gov/27898267"
    ]
   ],
   "category_tag": "Treatable",
@@ -12301,10 +12306,11 @@
   "ayurveda": "Traditional references mention guggul, shatavari; detailed traditional context for Ovarian Cysts is under editorial review.",
   "herbs": [
    "guggul",
-   "shatavari"
+   "shatavari",
+   "inositol"
   ],
-  "evidence": "Insufficient evidence",
-  "evidence_note": "No evidence rating compiled yet; traditional references only.",
+  "evidence": "Limited evidence",
+  "evidence_note": "No evidence rating compiled yet; traditional references only. Ovarian cysts have many causes needing diagnosis first. Inositol research: of nine stereoisomers, myo-inositol (MYO) and D-chiro-inositol (DCI) are studied for PCOS. Healthy plasma holds MYO:DCI near 40:1 while PCOS ovaries can invert toward 0.2:1; trials of MYO alone or MYO+DCI at 40:1 report improved endocrine and insulin-resistance markers, while DCI alone has insufficient evidence. Insulin-mediation is also studied in type 2 diabetes. Product forms here are myo-inositol; any use belongs under clinician guidance, especially with diabetes medicines or in pregnancy.",
   "safety": "Discuss any remedy with a qualified healthcare professional before use.",
   "contra": [
    "Without clinician advice"
@@ -12332,6 +12338,10 @@
    [
     "NHS",
     "https://www.nhs.uk/conditions/"
+   ],
+   [
+    "PubMed",
+    "https://pubmed.ncbi.nlm.nih.gov/27898267"
    ]
   ],
   "category_tag": "Treatable",
@@ -12546,10 +12556,11 @@
   "ayurveda": "Traditional references mention guggul, shatavari; detailed traditional context for PCOS is under editorial review.",
   "herbs": [
    "guggul",
-   "shatavari"
+   "shatavari",
+   "inositol"
   ],
-  "evidence": "Insufficient evidence",
-  "evidence_note": "No evidence rating compiled yet; traditional references only.",
+  "evidence": "Some evidence",
+  "evidence_note": "No evidence rating compiled yet; traditional references only. Inositol research: of nine stereoisomers, myo-inositol (MYO) and D-chiro-inositol (DCI) are studied for PCOS. Healthy plasma holds MYO:DCI near 40:1 while PCOS ovaries can invert toward 0.2:1; trials of MYO alone or MYO+DCI at 40:1 report improved endocrine and insulin-resistance markers, while DCI alone has insufficient evidence. Insulin-mediation is also studied in type 2 diabetes. Product forms here are myo-inositol; any use belongs under clinician guidance, especially with diabetes medicines or in pregnancy.",
   "safety": "Discuss any remedy with a qualified healthcare professional before use.",
   "contra": [
    "Without clinician advice"
@@ -12576,6 +12587,10 @@
    [
     "NHS",
     "https://www.nhs.uk/conditions/"
+   ],
+   [
+    "PubMed",
+    "https://pubmed.ncbi.nlm.nih.gov/27898267"
    ]
   ],
   "category_tag": "Treatable",

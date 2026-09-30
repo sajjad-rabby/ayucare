@@ -172,9 +172,7 @@ class _RemindersScreenState extends State<RemindersScreen> {
                         leading: r.kind == 'water'
                             ? const AyuGlyph.drop()
                             : Icon(r.icon,
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .primary),
+                                color: Theme.of(context).colorScheme.primary),
                         title: Text(r.title),
                         subtitle: Text('${r.time12} · daily'),
                         trailing: Row(

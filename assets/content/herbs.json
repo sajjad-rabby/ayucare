@@ -1876,5 +1876,33 @@
   "license": "",
   "reviewed": "2026-09-29",
   "version": "1.0"
+ },
+ {
+  "id": "inositol",
+  "name": "Inositol",
+  "scientific": "Myo-inositol / D-chiro-inositol",
+  "alt": "Vitamin B8 (nutrient, not a vitamin)",
+  "desc": "A vitamin-like nutrient found in cell membranes; myo-inositol is the most abundant form. Studied mainly as myo- + D-chiro combination.",
+  "traditional": "Not a traditional Ayurvedic herb; included as a researched nutrient supplement for education.",
+  "research": "Randomized trials and reviews report myo-inositol alone, or myo + D-chiro at the physiological 40:1 plasma ratio, improved endocrine and insulin-resistance markers in PCOS; D-chiro alone has insufficient/controversial evidence. Insulin-mediation also studied in type 2 diabetes.",
+  "evidence": "Some evidence",
+  "forms": "capsules (typically 500 mg myo-inositol), powder",
+  "safety": "Generally tolerated in trials; use with clinician guidance, especially with diabetes medicines or pregnancy.",
+  "contra": [
+   "Without clinician advice alongside diabetes medicines"
+  ],
+  "interactions": "May add to glucose-lowering medicines; clinician review needed.",
+  "pregnancy": "Clinician advice required.",
+  "children": "Clinician advice required.",
+  "sources": [
+   [
+    "PubMed",
+    "https://pubmed.ncbi.nlm.nih.gov/27898267"
+   ]
+  ],
+  "image": "",
+  "license": "",
+  "reviewed": "2026-09-30",
+  "version": "1.0"
  }
 ]

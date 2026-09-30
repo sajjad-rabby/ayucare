@@ -14,8 +14,8 @@ class AyuGlyph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = IconTheme.of(context).color ??
-        Theme.of(context).colorScheme.primary;
+    final color =
+        IconTheme.of(context).color ?? Theme.of(context).colorScheme.primary;
     return CustomPaint(
       size: Size.square(size),
       painter: _BrandPainter(color, _glyph),
@@ -59,18 +59,18 @@ class _BrandPainter extends CustomPainter {
       canvas.drawPath(
           Path()
             ..moveTo(w * 0.5, h * 0.88)
-            ..quadraticBezierTo(w * (0.5 + s * 0.28), h * 0.62,
-                w * (0.5 + s * 0.38), h * 0.34),
+            ..quadraticBezierTo(
+                w * (0.5 + s * 0.28), h * 0.62, w * (0.5 + s * 0.38), h * 0.34),
           p);
       canvas.drawPath(
           Path()
             ..moveTo(w * 0.5, h * 0.9)
-            ..quadraticBezierTo(w * (0.5 + s * 0.42), h * 0.86,
-                w * (0.5 + s * 0.46), h * 0.62),
+            ..quadraticBezierTo(
+                w * (0.5 + s * 0.42), h * 0.86, w * (0.5 + s * 0.46), h * 0.62),
           p);
     }
-    canvas.drawArc(Rect.fromLTWH(w * 0.08, h * 0.72, w * 0.84, h * 0.3),
-        0.15, 3.14 - 0.3, false, p);
+    canvas.drawArc(Rect.fromLTWH(w * 0.08, h * 0.72, w * 0.84, h * 0.3), 0.15,
+        3.14 - 0.3, false, p);
   }
 
   void _leaf(Canvas canvas, Size size) {
@@ -82,11 +82,9 @@ class _BrandPainter extends CustomPainter {
           ..quadraticBezierTo(w * 0.95, h * 0.4, w * 0.5, h * 0.92)
           ..quadraticBezierTo(w * 0.05, h * 0.4, w * 0.5, h * 0.08),
         p);
-    canvas.drawLine(
-        Offset(w * 0.5, h * 0.14), Offset(w * 0.5, h * 0.86), p);
+    canvas.drawLine(Offset(w * 0.5, h * 0.14), Offset(w * 0.5, h * 0.86), p);
     final thin = _p..strokeWidth = w * 0.06;
-    canvas.drawLine(
-        Offset(w * 0.5, h * 0.4), Offset(w * 0.72, h * 0.3), thin);
+    canvas.drawLine(Offset(w * 0.5, h * 0.4), Offset(w * 0.72, h * 0.3), thin);
     canvas.drawLine(
         Offset(w * 0.5, h * 0.58), Offset(w * 0.28, h * 0.48), thin);
   }
