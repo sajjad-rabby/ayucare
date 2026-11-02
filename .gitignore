@@ -46,3 +46,8 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Secrets — never commit (android/.gitignore also covers these)
+android/key.properties
+*.jks
+*.keystore
