@@ -13,7 +13,6 @@
 AyuCare is an educational health and Ayurveda reference app for Android. It ships its entire content library offline — conditions, herbs, products, research notes — and runs with no backend, no account, and no analytics.
 
 **Google Play:** https://play.google.com/store/apps/details?id=com.xeloxy.ayucare
-**Website:** https://ayucare.my.canva.site/
 
 ## What's inside
 
